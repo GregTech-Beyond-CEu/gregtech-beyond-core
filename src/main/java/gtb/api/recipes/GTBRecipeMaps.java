@@ -21,7 +21,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_FURNACE_RECIPES = new RecipeMap<>(
             "vacuum_furnace_recipes",
-            1, 1, 0, 0, new SimpleRecipeBuilder(), false);
+            2, 1, 2, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT_RECIPES = new RecipeMap<>("bacterial_vat_recipes",
             4, 2, 6, 4, new SimpleRecipeBuilder(), false);
@@ -135,7 +135,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT_RECIPES = new RecipeMap<>(
             "condensation_unit_recipes",
-            1, 0, 2, 4, new SimpleRecipeBuilder(), false);
+            1, 1, 2, 4, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT_RECIPES = new RecipeMap<>(
             "cryogenic_distillation_plant_recipes",
@@ -176,7 +176,7 @@ public final class GTBRecipeMaps {
             "gravity_separator_recipes", 4, 4, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_LITHOGRAPHER_RECIPES = new RecipeMap<>(
-            "electron_beam_lithographer_recipes", 2, 1, 1, 0, new SimpleRecipeBuilder(), false);
+            "electron_beam_lithographer_recipes", 3, 1, 1, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ENZYMATIC_HYDROLYSIS_RECIPES = new RecipeMap<>(
             "enzymatic_hydrolysis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
@@ -186,9 +186,6 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
-            "vulcanized_press_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
             "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
@@ -262,21 +259,60 @@ public final class GTBRecipeMaps {
                     .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
                     .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 
-    public static final RecipeMap<SimpleRecipeBuilder> WATER_COLLECTOR_RECIPES = new RecipeMap<>(
-            "water_collector_recipes",
-            1, 0, 0, 1, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
-
-    public static final RecipeMap<SimpleRecipeBuilder> INDUCTION_SMELTER_RECIPES = new RecipeMap<>(
-            "induction_smelter_recipes",
-            3, 2, 0, 0, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-                    .setSlotOverlay(false, false, false, GuiTextures.CRYSTAL_OVERLAY);
-
     public static final RecipeMap<SimpleRecipeBuilder> INSCRIBER_RECIPES = new RecipeMap<>(
             "inscriber_recipes",
             3, 1, 0, 0, new SimpleRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
                     .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
+
+    public static final RecipeMap<NoEnergyRecipeBuilder> BLOOMERY_RECIPES = new RecipeMap<>(
+            "bloomery_recipes",
+            2, 3, 0, 0, new NoEnergyRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TUBE_IN_TUBE_REACTOR_RECIPES = new RecipeMap<>(
+            "tube_in_tube_reactor_recipes",
+            2, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ADSORPTION_TOWER = new RecipeMap<>(
+            "adsorption_tower",
+            1, 0, 3, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> REACTIVE_ION_ETCHER_RECIPES = new RecipeMap<>(
+            "reactive_ion_etcher",
+            1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PVD_UNIT_RECIPES = new RecipeMap<>(
+            "pvd_unit_recipes",
+            4, 1, 3, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BLENDER_RECIPES = new RecipeMap<>(
+            "blender_recipes",
+            3, 1, 4, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SPINCOATER_RECIPES = new RecipeMap<>(
+            "spincoater_recipes",
+            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> AUTOMATIC_WIRE_BONDER = new RecipeMap<>(
+            "automatic_wire_bonder_recipes",
+            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SONICATOR_RECIPES = new RecipeMap<>(
+            "sonicator",
+            6, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_LITHOGRAPHER_RECIPES_MULTI = new RecipeMap<>(
+            "electron_beam_lithographer_recipes_multi", 4, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_VACUUM_EVAPORATION_RECIPES = new RecipeMap<>(
+            "high_vacuum_evaporation_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CRUCIBLE_RECIPES = new RecipeMap<>(
+            "crucible", 4, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ATOMIC_LAYER_DEPOSITION_RECIPES = new RecipeMap<>(
+            "atomic_layer_deposition", 4, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DRYING_COLUMN_RECIPES = new RecipeMap<>(
+            "drying_column", 1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 }
