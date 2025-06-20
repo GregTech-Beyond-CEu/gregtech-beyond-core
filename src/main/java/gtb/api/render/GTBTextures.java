@@ -55,6 +55,12 @@ public final class GTBTextures {
             "machines/rotary_evaporator");
     public static OrientedOverlayRenderer MICROSCOPE_OVERLAY = new OrientedOverlayRenderer(
             "machines/microscope");
+    public static OrientedOverlayRenderer BATCH_REACTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/batch_reactor");
+    public static OrientedOverlayRenderer CONTINOUS_STIRRING_TANK_REACTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/cstr");
+    public static OrientedOverlayRenderer TRICKLE_BED_REACTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/trickle_bed_reactor");
     public static OrientedOverlayRenderer WATER_COLLECTOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/water_collector");
     public static OrientedOverlayRenderer INDUCTION_SMELTER_OVERLAY = new OrientedOverlayRenderer(

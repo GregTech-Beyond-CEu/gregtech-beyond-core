@@ -94,6 +94,10 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityCrystallizationCruicible CRYSTALLIZATION_CRUICIBLE;
     public static MetaTileEntityAtomicLayerDepositionSystem ATOMIC_LAYER_DEPOSITION_SYSTEM;
     public static MetaTileEntityDryingColumn DRYING_COLUMN;
+    public static MetaTileEntityFluidizedBedReactor FLUIDIZED_BED_REACTOR;
+    public static MetaTileEntityTubeFurnace TUBE_FURNACE;
+    public static MetaTileEntityHeatExchanger HEAT_EXCHANGER;
+    public static MetaTileEntityFlashChromatographySystem FLASH_CHROMATOGRAPHY_SYSTEM;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -113,6 +117,9 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] SPACE_COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] SPINCOATER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] AUTOMATIC_WIRE_BONDER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] BATCH_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] CONTINOUS_STIRRING_TANK_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] TRICKLE_BED_REACTOR = new SimpleMachineMetaTileEntity[15];
 
     public static final int MAX_BASIC_MACHINES = 100;
     public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
@@ -236,6 +243,14 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityAtomicLayerDepositionSystem(gtb("atomic_layer_deposition")));
         DRYING_COLUMN = registerMetaTileEntity(3066,
                 new MetaTileEntityDryingColumn(gtb("drying_column")));
+        FLUIDIZED_BED_REACTOR = registerMetaTileEntity(3067,
+                new MetaTileEntityFluidizedBedReactor(gtb("fbr")));
+        FLASH_CHROMATOGRAPHY_SYSTEM = registerMetaTileEntity(3068,
+                new MetaTileEntityFlashChromatographySystem(gtb("flash_chromatography_system")));
+        TUBE_FURNACE = registerMetaTileEntity(3069,
+                new MetaTileEntityTubeFurnace(gtb("tube_furnace")));
+        HEAT_EXCHANGER = registerMetaTileEntity(3070,
+                new MetaTileEntityHeatExchanger(gtb("heat_exchanger")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -314,6 +329,22 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 AUTOMATIC_WIRE_BONDER, 4340, "automatic_wire_bonder",
                 GTBRecipeMaps.AUTOMATIC_WIRE_BONDER, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                BATCH_REACTOR, 4360, "batch_reactor",
+                GTBRecipeMaps.BATCH_REACTOR_RECIPES, GTBTextures.BATCH_REACTOR_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                TRICKLE_BED_REACTOR, 4380, "trickle_bed_reactor",
+                GTBRecipeMaps.TRICKLE_BED_REACTOR_RECIPES, GTBTextures.TRICKLE_BED_REACTOR_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                CONTINOUS_STIRRING_TANK_REACTOR, 4400, "cstr",
+                GTBRecipeMaps.CONTINOUS_STIRRING_TANK_REACTOR_RECIPES,
+                GTBTextures.CONTINOUS_STIRRING_TANK_REACTOR_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         /**

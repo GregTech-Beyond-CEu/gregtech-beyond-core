@@ -315,4 +315,22 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DRYING_COLUMN_RECIPES = new RecipeMap<>(
             "drying_column", 1, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BATCH_REACTOR_RECIPES = new RecipeMap<>(
+            "batch_reactor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TRICKLE_BED_REACTOR_RECIPES = new RecipeMap<>(
+            "trickle_bed_reactor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CONTINOUS_STIRRING_TANK_REACTOR_RECIPES = new RecipeMap<>(
+            "continous_stirring_tank_reactor_recipes", 4, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FLUIDIZED_BED_REACTOR_RECIPES = new RecipeMap<>(
+            "fbr_recipes", 4, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FLASH_CHROMATOGRAPHY_RECIPES = new RecipeMap<>(
+            "flash_chromatography_recipes", 1, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TUBE_FURNACE_RECIPES = new RecipeMap<>(
+            "tube_furnace", 4, 4, 2, 2, new SimpleRecipeBuilder(), false);
 }

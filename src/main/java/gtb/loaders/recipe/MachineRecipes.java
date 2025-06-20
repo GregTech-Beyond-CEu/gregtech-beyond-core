@@ -405,5 +405,36 @@ public class MachineRecipes {
                 'A', CABLE,
                 'R', ROTOR,
                 'L', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.CONTINOUS_STIRRING_TANK_REACTOR,
+                "GRG",
+                "PMP",
+                "CLC",
+                'L', MOTOR,
+                'C', CIRCUIT,
+                'P', PUMP,
+                'R', ROTOR,
+                'M', HULL,
+                'G', GLASS);
+
+        registerMachineRecipe(GTBMetaTileEntities.TRICKLE_BED_REACTOR,
+                "UPU",
+                "CMC",
+                "ZPZ",
+                'U', PIPE_NORMAL,
+                'C', CIRCUIT,
+                'P', PUMP,
+                'Z', MOTOR,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.BATCH_REACTOR,
+                "PCP",
+                "LML",
+                "ZCZ",
+                'C', CIRCUIT,
+                'P', PUMP,
+                'Z', CONVEYOR,
+                'M', HULL,
+                'L', CABLE);
     }
 }
