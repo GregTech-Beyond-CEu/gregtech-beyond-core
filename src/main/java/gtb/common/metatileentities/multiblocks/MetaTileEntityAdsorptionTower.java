@@ -17,58 +17,66 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockWireCoil;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityVulcanizedPress extends RecipeMapMultiblockController {
+public class MetaTileEntityAdsorptionTower extends RecipeMapMultiblockController {
 
-    public MetaTileEntityVulcanizedPress(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.VULCANIZED_PRESS_RECIPES);
+    public MetaTileEntityAdsorptionTower(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.ADSORPTION_TOWER);
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.BOILER_FIREBOX_CASING.getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PCP", "CCC", "PSP")
-                .aisle("VVV", "V~V", "VVV")
-                .aisle("PCP", "CCC", "PCP")
+                .aisle("~CCC~", "CCCCC", "CCCCC", "CCCCC", "~CSC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "CC~CC", "CC~CC", "CC~CC", "~CCC~")
+                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~~C~~", "~CCC~", "~~C~~", "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState()).setMinGlobalLimited(4)
+                .where('C', states(getCasingState()).setMinGlobalLimited(90)
                         .or(autoAbilities()))
-                .where('V', states(MetaBlocks.WIRE_COIL.getState(BlockWireCoil.CoilType.CUPRONICKEL)))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(true, true, true, true, true, true, true);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.STEEL_FIREBOX;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @SideOnly(Side.CLIENT)
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.ASSEMBLER_OVERLAY;
+        return Textures.POLARIZER_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityVulcanizedPress(metaTileEntityId);
+        return new MetaTileEntityAdsorptionTower(metaTileEntityId);
     }
 }

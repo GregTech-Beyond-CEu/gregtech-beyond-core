@@ -1,0 +1,43 @@
+{
+  "forge_marker" : 1,
+  "defaults" : {
+    "model" : "minecraft:cube_all",
+    "textures" : {
+      "all" : "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "variant": {
+      "hss_g_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/hss_g_casing"
+            }
+          },
+      "blade_assembly_block" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/blade_assembly_block"
+            }
+          },
+      "thermal_evaporation_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/thermal_evaporation_casing"
+        }
+      },
+      "fused_quartz_block" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/fused_quartz_block"
+        }
+      },
+      "sonicator_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/sonicator_casing"
+        }
+      }
+    }
+  }
+}
