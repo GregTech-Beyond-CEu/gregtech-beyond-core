@@ -38,6 +38,8 @@ tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Cas
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
+tile.gtb_multiblock_casing.beryllium_detector.name=Beryllium Detector
+tile.gtb_multiblock_casing.neodymium_magnet.name=Neodymium Magnet
 
 # Recipemaps
 recipemap.water_tank_recipes.name=Water Collection
