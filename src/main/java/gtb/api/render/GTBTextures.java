@@ -39,6 +39,8 @@ public final class GTBTextures {
             "hatches/kev_multiblock_hatch/output_overlay");
     public static SimpleOverlayRenderer KEV_HATCH_INPUT_OVERLAY = new SimpleOverlayRenderer(
             "hatches/kev_multiblock_hatch/input_overlay");
+    public static SimpleOverlayRenderer PARTICLE_PROTECTION_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/particle_protection_casing");
 
     private GTBTextures() {}
 

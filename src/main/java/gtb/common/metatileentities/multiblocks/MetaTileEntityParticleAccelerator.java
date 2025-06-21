@@ -1,7 +1,15 @@
 package gtb.common.metatileentities.multiblocks;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 
+import gregtech.api.pattern.MultiblockShapeInfo;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBBlockWireCoil;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
@@ -41,9 +49,9 @@ import gtb.api.metatileentity.multiblock.KevConsumerLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import lombok.Getter;
 
+@Getter
 public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockController implements IKevMachine {
 
-    @Getter
     private KevContainer kevContainer;
 
     public MetaTileEntityParticleAccelerator(ResourceLocation metaTileEntityId) {
@@ -66,26 +74,87 @@ public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockContro
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC", "CCC", "CCC")
-                .aisle("CCC", "CAC", "CSC")
-                .aisle("CCC", "CCC", "CCC")
+                .aisle(
+                        "~~~~~~~~~~~~~~~",
+                        "~~~~~~GGG~~~~~~",
+                        "~~~~~~~~~~~~~~~")
+                .aisle(
+                        "~~~~~~GGG~~~~~~",
+                        "~~~~GGCCCGG~~~~",
+                        "~~~~~~GSG~~~~~~")
+                .aisle(
+                        "~~~~GG~~~GG~~~~",
+                        "~~~GCCGGGCCG~~~",
+                        "~~~~GG~~~GG~~~~")
+                .aisle(
+                        "~~~G~~~~~~~G~~~",
+                        "~~GCGG~~~GGCG~~",
+                        "~~~G~~~~~~~G~~~")
+                .aisle(
+                        "~~G~~~~~~~~~G~~",
+                        "~GCG~~~~~~~GCG~",
+                        "~~G~~~~~~~~~G~~")
+                .aisle(
+                        "~~G~~~~~~~~~G~~",
+                        "~GCG~~~~~~~GCG~",
+                        "~~G~~~~~~~~~G~~")
+                .aisle(
+                        "~G~~~~~~~~~~~G~",
+                        "GCG~~~~~~~~~GCG",
+                        "~G~~~~~~~~~~~G~")
+                .aisle(
+                        "~G~~~~~~~~~~~G~",
+                        "GCG~~~~~~~~~GCG",
+                        "~G~~~~~~~~~~~G~")
+                .aisle(
+                        "~G~~~~~~~~~~~G~",
+                        "GCG~~~~~~~~~GCG",
+                        "~G~~~~~~~~~~~G~")
+                .aisle(
+                        "~~G~~~~~~~~~G~~",
+                        "~GCG~~~~~~~GCG~",
+                        "~~G~~~~~~~~~G~~")
+                .aisle(
+                        "~~G~~~~~~~~~G~~",
+                        "~GCG~~~~~~~GCG~",
+                        "~~G~~~~~~~~~G~~")
+                .aisle(
+                        "~~~G~~~~~~~G~~~",
+                        "~~GCGG~~~GGCG~~",
+                        "~~~G~~~~~~~G~~~")
+                .aisle(
+                        "~~~~GG~~~GG~~~~",
+                        "~~~GCCGGGCCG~~~",
+                        "~~~~GG~~~GG~~~~")
+                .aisle(
+                        "~~~~~~GGG~~~~~~",
+                        "~~~~GGCCCGG~~~~",
+                        "~~~~~~GGG~~~~~~")
+                .aisle(
+                        "~~~~~~~~~~~~~~~",
+                        "~~~~~~GGG~~~~~~",
+                        "~~~~~~~~~~~~~~~")
                 .where('S', selfPredicate())
-                .where('A', air())
-                .where('C', states(getCasingState()).setMinGlobalLimited(18)
-                        .or(autoAbilities())
-                        .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_INPUT).setExactLimit(1)))
+                .where('~', any())
+                .where('G',
+               states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.PARTICLE_PROTECTION_CASING))
+                       .setMinGlobalLimited(116)
+                       .or(autoAbilities()))
+                .where('C', states(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL.getState(GTBBlockWireCoil.GTBCoilType.ADAMANTIUM)))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, true, true, true, true, true, false);
+        return autoAbilities(true, true, true, true, true, true, false)
+                .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_INPUT))
+                .setExactLimit(1);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.PARTICLE_PROTECTION_CASING;
     }
 
     @Override
