@@ -185,6 +185,6 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<KevRecipeBuilder> KEV_RECIPE_MAP = new RecipeMap<>(
-            "kev_recipe_map", 2, 1, 1, 1, new KevRecipeBuilder(), false);
+    public static final RecipeMap<KevRecipeBuilder> PARTICLE_ACCELERATOR_RECIPES = new RecipeMap<>(
+            "particle_accelerator_recipes", 2, 1, 1, 1, new KevRecipeBuilder(), false);
 }
