@@ -1406,6 +1406,13 @@ gregtech.material.sodio_indene=Sodio-Indene
 gregtech.material.molybdenum_flue=Molybdenum Flue Gas
 material.trace_rhenium_flue=Trace Rhenium Flue Gas
 
+gregtech.material.perfluoropolyether_k=Perfluoropolyether K (PFPE)
+gregtech.material.f_li_be=FLiBe
+gregtech.material.ln=LN
+gregtech.material.biphenyl_diphenyl_ether=Biphenyl-Diphenyl Ether
+gregtech.material.fc_40=FC-40
+gregtech.material.mnovec=3M Novec
+
 
 
 
@@ -1430,7 +1437,15 @@ gtb.multiblock.kev_reception.none=No kEv source found
 
 
 # Tooltips
-gtb.machine.kev_cooler.cooling_amount=§fReduces the produced §akEv §fby §b%d
+gtb.machine.kev_cooler.cooling_amount=Reduces the produced §akEv §fby §b%d
+
+
+gtb.machine.kev_cooler.gregtech.material.perfluoropolyether_k.name=PFPE Cooler
+gtb.machine.kev_cooler.gregtech.material.f_li_be.name=FLiBe Cooler
+gtb.machine.kev_cooler.gregtech.material.ln.name=LN Cooler
+gtb.machine.kev_cooler.gregtech.material.biphenyl_diphenyl_ether.name=Biphenyl-Diphenyl Ether Cooler
+gtb.machine.kev_cooler.gregtech.material.fc_40.name=FC-40 Cooler
+gtb.machine.kev_cooler.gregtech.material.mnovec.name=3M Novec Cooler
 
 gtb.machine.kev_generator.usage=Accelerates particles.
 gtb.machine.kev_generator.base_kev_production=Base production: §a%d kEv§r.

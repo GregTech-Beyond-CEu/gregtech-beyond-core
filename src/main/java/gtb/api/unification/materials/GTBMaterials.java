@@ -826,6 +826,14 @@ public class GTBMaterials {
     public static Material TemporallyConstrainedAntiMatter;
     public static Material CataclysmInducedMixedMatter;
 
+    // Kev Coolers Materials
+    public static Material LN;
+    public static Material FLiBe;
+    public static Material MNovec;
+    public static Material BiphenylDiphenylEther;
+    public static Material Fc_40;
+    public static Material PerfluoropolyetherK;
+
     public static void init() {
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
@@ -834,6 +842,7 @@ public class GTBMaterials {
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
         GTBFantasyMaterials.register();
+        GTBKevCoolersMaterials.register();
         GTBMaterialPropertyAddition.init();
         GTBMaterialIconSet.set();
     }
