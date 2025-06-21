@@ -41,12 +41,12 @@ import gtb.api.metatileentity.multiblock.KevConsumerLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import lombok.Getter;
 
-public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController implements IKevMachine {
+public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockController implements IKevMachine {
 
     @Getter
     private KevContainer kevContainer;
 
-    public MetaTileEntityKevConsumer(ResourceLocation metaTileEntityId) {
+    public MetaTileEntityParticleAccelerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.KEV_RECIPE_MAP);
         this.recipeMapWorkable = new KevConsumerLogic(this);
     }
@@ -104,7 +104,7 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityKevConsumer(metaTileEntityId);
+        return new MetaTileEntityParticleAccelerator(metaTileEntityId);
     }
 
     @Override

@@ -4,7 +4,6 @@ import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
 
@@ -62,8 +61,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityCuringOven CURING_OVEN;
     public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
     public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
-    public static MetaTileEntityKevGenerator KEV_GENERATOR;
-    public static MetaTileEntityKevConsumer KEV_CONSUMER;
+    public static MetaTileEntityLinearAccelerator LINEAR_ACCELERATOR;
+    public static MetaTileEntityParticleAccelerator PARTICLE_ACCELERATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -150,8 +149,8 @@ public final class GTBMetaTileEntities {
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
         KEV_OUTPUT_HATCH = registerMetaTileEntity(3040, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
         KEV_INPUT_HATCH = registerMetaTileEntity(3041, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
-        KEV_GENERATOR = registerMetaTileEntity(3042, new MetaTileEntityKevGenerator(gtb("kev_generator")));
-        KEV_CONSUMER = registerMetaTileEntity(3043, new MetaTileEntityKevConsumer(gtb("kev_consumer")));
+        LINEAR_ACCELERATOR = registerMetaTileEntity(3042, new MetaTileEntityLinearAccelerator(gtb("linear_accelerator")));
+        PARTICLE_ACCELERATOR = registerMetaTileEntity(3043, new MetaTileEntityParticleAccelerator(gtb("particle_accelerator")));
         KEV_COOLERS[0] = registerMetaTileEntity(3044, new MetaTileEntityKevCooler(GTBMaterials.LN, 1));
         KEV_COOLERS[1] = registerMetaTileEntity(3045, new MetaTileEntityKevCooler(GTBMaterials.FLiBe, 5));
         KEV_COOLERS[2] = registerMetaTileEntity(3046, new MetaTileEntityKevCooler(GTBMaterials.MNovec, 10));

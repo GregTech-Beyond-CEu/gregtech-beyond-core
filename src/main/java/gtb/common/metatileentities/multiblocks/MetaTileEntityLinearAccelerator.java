@@ -30,7 +30,6 @@ import gregtech.api.capability.IControllable;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.MultiblockWithDisplayBase;
 import gregtech.api.pattern.BlockPattern;
@@ -51,13 +50,13 @@ import gtb.api.capabilities.KevContainer;
 import gtb.api.metatileentity.multiblock.KevGeneratorLogic;
 import gtb.api.utils.GTBMultiblockDisplayTextUtil;
 
-public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
+public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
     private final KevGeneratorLogic logic;
     public static final int BASE_KEV_PRODUCTION = 3000;
     public static final int BASE_EU_CONSUMPTION = 1024;
 
-    public MetaTileEntityKevGenerator(ResourceLocation metaTileEntityId) {
+    public MetaTileEntityLinearAccelerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId);
         this.logic = new KevGeneratorLogic(this, BASE_EU_CONSUMPTION, BASE_KEV_PRODUCTION);
     }
@@ -143,7 +142,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityKevGenerator(metaTileEntityId);
+        return new MetaTileEntityLinearAccelerator(metaTileEntityId);
     }
 
     @Override
