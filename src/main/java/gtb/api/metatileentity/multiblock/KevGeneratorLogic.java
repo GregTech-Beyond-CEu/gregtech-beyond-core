@@ -26,15 +26,9 @@ public class KevGeneratorLogic {
     @Getter
     private KevContainer kevContainer;
     @Getter
-    private int coolingAmount = 0;
+    private int coolingAmount, kevProduction, euConsumption = 0;
     @Getter
-    private int kevProduction = 0;
-    @Getter
-    private int euConsumption = 0;
-    @Getter
-    private boolean isWorking = false;
-    @Getter
-    private boolean isWorkingEnabled = false;
+    private boolean isWorking, isWorkingEnabled = false;
 
     private final MultiblockWithDisplayBase metaTileEntity;
     private IEnergyContainer energyContainer;
@@ -59,6 +53,7 @@ public class KevGeneratorLogic {
     }
 
     private void setCoolingAmount() {
+        coolingAmount = 0;
         getAbilities(GTBMultiblockAbilities.KEV_COOLER).forEach(cooler -> coolingAmount += cooler.getCoolingAmount());
     }
 

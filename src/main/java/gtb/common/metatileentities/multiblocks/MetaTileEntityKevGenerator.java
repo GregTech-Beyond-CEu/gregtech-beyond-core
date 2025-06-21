@@ -53,8 +53,8 @@ import gtb.api.utils.GTBMultiblockDisplayTextUtil;
 
 public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
-    private KevGeneratorLogic logic;
-    public static final int BASE_KEV_PRODUCTION = 300;
+    private final KevGeneratorLogic logic;
+    public static final int BASE_KEV_PRODUCTION = 3000;
     public static final int BASE_EU_CONSUMPTION = 1024;
 
     public MetaTileEntityKevGenerator(ResourceLocation metaTileEntityId) {
