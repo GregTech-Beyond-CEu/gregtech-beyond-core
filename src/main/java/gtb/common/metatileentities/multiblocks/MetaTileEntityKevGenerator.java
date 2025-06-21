@@ -4,6 +4,10 @@ import static gtb.api.utils.GTBMultiblockDisplayTextUtil.*;
 
 import java.util.List;
 
+import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.common.blocks.BlockGlassCasing;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
@@ -79,20 +83,42 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
 
+    public IBlockState getGlassState() {
+        return MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS);
+    }
+
+    public IBlockState getBerylliumDetectorState() {
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.BERYLLIUM_DETECTOR_CASING);
+    }
+
+    public IBlockState getNeodymiumMagnetState() {
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.NEODYMIUM_MAGNET_CASING);
+    }
+
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC", "CCC", "CCC", "CCC")
-                .aisle("CCC", "GOG", "GOG", "CSC")
-                .aisle("CCC", "CCC", "CCC", "CCC")
+        return FactoryBlockPattern.start(RelativeDirection.FRONT, RelativeDirection.UP, RelativeDirection.RIGHT)
+                .aisle("CCCCC", "CCCCC", "SCCCC", "CCCCC", "CCCCC")
+                .aisle("GGGGG", "GOOOG", "GOOOG", "GOOOG", "GGGGG").setRepeatable(6)
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", "CNBNC", "CNBNC", "CNBNC", "CCCCC")
+                .aisle("CCCCC", "CBNBC", "CBNBC", "CBNBC", "CCCCC")
+                .aisle("CCCCC", "CNBNC", "CNBNC", "CNBNC", "CCCCC")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('O', abilities(GTBMultiblockAbilities.KEV_COOLER))
-                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getDefaultState()))
+                .where('G', states(getGlassState()))
+                .where('B', states(getBerylliumDetectorState()))
+                .where('N', states(getNeodymiumMagnetState()))
                 .where('C', states(getCasingState()).setMinGlobalLimited(18)
-                        .or(autoAbilities())
-                        .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setMaxGlobalLimited(2)))
+                        .or(autoAbilities()))
                 .build();
+    }
+
+    @Override
+    public TraceabilityPredicate autoAbilities() {
+        return super.autoAbilities()
+                .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).setExactLimit(1));
     }
 
     @Override
