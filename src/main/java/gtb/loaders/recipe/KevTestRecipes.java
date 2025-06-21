@@ -8,7 +8,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class KevTestRecipes {
 
     public static void register() {
-        GTBRecipeMaps.KEV_RECIPE_MAP.recipeBuilder()
+        GTBRecipeMaps.PARTICLE_ACCELERATOR_RECIPES.recipeBuilder()
                 .input(OrePrefix.ingot, Materials.Steel)
                 .output(OrePrefix.plate, Materials.Steel)
                 .kEv(270)

@@ -1,15 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Stack;
 
-import gregtech.api.pattern.MultiblockShapeInfo;
-import gtb.api.render.GTBTextures;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBBlockWireCoil;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
@@ -47,6 +39,10 @@ import gtb.api.capabilities.IKevMachine;
 import gtb.api.capabilities.KevContainer;
 import gtb.api.metatileentity.multiblock.KevConsumerLogic;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBBlockWireCoil;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 import lombok.Getter;
 
 @Getter
@@ -55,7 +51,7 @@ public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockContro
     private KevContainer kevContainer;
 
     public MetaTileEntityParticleAccelerator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.KEV_RECIPE_MAP);
+        super(metaTileEntityId, GTBRecipeMaps.PARTICLE_ACCELERATOR_RECIPES);
         this.recipeMapWorkable = new KevConsumerLogic(this);
     }
 
@@ -137,9 +133,10 @@ public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockContro
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('G',
-               states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.PARTICLE_PROTECTION_CASING))
-                       .setMinGlobalLimited(116)
-                       .or(autoAbilities()))
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.PARTICLE_PROTECTION_CASING))
+                                        .setMinGlobalLimited(116)
+                                        .or(autoAbilities()))
                 .where('C', states(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL.getState(GTBBlockWireCoil.GTBCoilType.ADAMANTIUM)))
                 .build();
     }
@@ -154,7 +151,7 @@ public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockContro
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return GTBTextures.PARTICLE_PROTECTION_CASING;
+        return GTBTextures.PARTICLE_PROTECTION_CASING_OVERLAY;
     }
 
     @Override

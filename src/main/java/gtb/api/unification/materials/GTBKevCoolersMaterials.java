@@ -1,14 +1,11 @@
 package gtb.api.unification.materials;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.fluids.store.FluidStorageKey;
-import gregtech.api.fluids.store.FluidStorageKeys;
-import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.Materials;
-import net.minecraftforge.fluids.Fluid;
-
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
+
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.Materials;
 
 public class GTBKevCoolersMaterials {
 
@@ -22,7 +19,7 @@ public class GTBKevCoolersMaterials {
                 .color(0x6B8D6E)
                 .build();
 
-        //See https://en.wikipedia.org/wiki/FLiBe
+        // See https://en.wikipedia.org/wiki/FLiBe
         FLiBe = new Material.Builder(getMaterialsId(), gregtechId("f_li_be"))
                 .liquid(new FluidBuilder().temperature(459 + 273))
                 .colorAverage()
@@ -30,15 +27,16 @@ public class GTBKevCoolersMaterials {
                 .build()
                 .setFormula("Li2(BeF4)", true);
 
-        //See https://www.sigmaaldrich.com/FR/fr/product/sigma/shh0002
-        //See could be called methoxy-nonafluorobutane
+        // See https://www.sigmaaldrich.com/FR/fr/product/sigma/shh0002
+        // See could be called methoxy-nonafluorobutane
         MNovec = new Material.Builder(getMaterialsId(),
                 gregtechId("mnovec"))
                         .fluid()
-                .components(Materials.Carbon, 5, Materials.Hydrogen, 3, Materials.Oxygen, 1, Materials.Fluorine, 9)
+                        .components(Materials.Carbon, 5, Materials.Hydrogen, 3, Materials.Oxygen, 1, Materials.Fluorine,
+                                9)
                         .color(0x376B3B)
                         .build()
-                .setFormula("CF3(CF2)3OCH3", true);
+                        .setFormula("CF3(CF2)3OCH3", true);
 
         PerfluoropolyetherK = new Material.Builder(getMaterialsId(), gregtechId("perfluoropolyether_k"))
                 .fluid()

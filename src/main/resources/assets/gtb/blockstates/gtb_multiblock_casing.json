@@ -98,6 +98,12 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/particle_protection_casing"
         }
       },
+      "linear_accelerator_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/linear_accelerator_casing"
+        }
+      },
       "substrate_casing" : {
         "model" : "minecraft:cube_bottom_top",
         "textures" : {

@@ -4,10 +4,6 @@ import static gtb.api.utils.GTBMultiblockDisplayTextUtil.*;
 
 import java.util.List;
 
-import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.common.blocks.BlockGlassCasing;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
@@ -30,15 +26,17 @@ import gregtech.api.capability.IControllable;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.MultiblockWithDisplayBase;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.PatternMatchContext;
+import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
@@ -48,7 +46,10 @@ import gtb.api.capabilities.GTBMultiblockAbilities;
 import gtb.api.capabilities.IKevMachine;
 import gtb.api.capabilities.KevContainer;
 import gtb.api.metatileentity.multiblock.KevGeneratorLogic;
+import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBMultiblockDisplayTextUtil;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
@@ -79,7 +80,7 @@ public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase i
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.LINEAR_ACCELERATOR_CASING);
     }
 
     public IBlockState getGlassState() {
@@ -117,6 +118,7 @@ public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase i
     @Override
     public TraceabilityPredicate autoAbilities() {
         return super.autoAbilities()
+                .or(abilities(MultiblockAbility.INPUT_ENERGY).setMaxGlobalLimited(2, 2))
                 .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).setExactLimit(1));
     }
 
@@ -130,7 +132,7 @@ public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase i
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.LINEAR_ACCELERATOR_CASING_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)

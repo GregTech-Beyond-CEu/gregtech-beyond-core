@@ -1,8 +1,5 @@
 package gtb.common.block.blocks;
 
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
-import gtb.common.block.GTBMetaBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -49,7 +46,8 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         GRAVITY_SEPARATOR_ROTOR_BLOCK("gravity_separator_rotor_block"),
         BERYLLIUM_DETECTOR_CASING("beryllium_detector"),
         NEODYMIUM_MAGNET_CASING("neodymium_magnet"),
-        PARTICLE_PROTECTION_CASING("particle_protection_casing");
+        PARTICLE_PROTECTION_CASING("particle_protection_casing"),
+        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing");
 
         private final String name;
 
