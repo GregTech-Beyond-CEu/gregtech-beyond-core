@@ -36,7 +36,8 @@ public class GTBMultiblockCasing2 extends VariantBlock<GTBMultiblockCasing2.Casi
         SONCIATOR_CASING("sonicator_casing"),
         THERMAL_EVAPORATION_CASING("thermal_evaporation_casing"),
         FUSED_QUARTZ_BLOCK("fused_quartz_block"),
-        BLADE_ASSEMBLY_CASING("blade_assembly_casing");
+        BLADE_ASSEMBLY_CASING("blade_assembly_casing"),
+        ROCKET_BLOCK_BASE("rocket_block_base");
 
         private final String name;
 
