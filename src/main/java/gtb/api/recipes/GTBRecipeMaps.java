@@ -334,4 +334,6 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> TUBE_FURNACE_RECIPES = new RecipeMap<>(
             "tube_furnace", 4, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> PRECISION_LASER_RECIPES = new RecipeMap<>(
+            "precision_laser", 4, 2, 1, 1, new SimpleRecipeBuilder(), false);
 }
