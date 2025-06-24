@@ -64,11 +64,6 @@ public class MetaTileEntityRocketLaunchPad extends RecipeMapMultiblockController
                 .build();
     }
 
-    @Override
-    public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, true, true, true, true, true, true);
-    }
-
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
