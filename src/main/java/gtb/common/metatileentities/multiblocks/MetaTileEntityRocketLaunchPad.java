@@ -38,15 +38,17 @@ public class MetaTileEntityRocketLaunchPad extends RecipeMapMultiblockController
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
                 .aisle(
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC")
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~")
                 .aisle(
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC")
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~",
+                        "~CCC~")
                 .aisle( "~CCC~",
                         "CZZZC",
                         "CZZZC",
