@@ -81,6 +81,8 @@ public final class GTBTextures {
             "machines/ion_implanter");
     public static OrientedOverlayRenderer ELECTRON_BEAM_LITHOGRAPHER_OVERLAY = new OrientedOverlayRenderer(
             "machines/electron_beam");
+    public static SimpleOverlayRenderer PORCELAIN_TILES = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing2/galvanized_porcelain_tiles");
 
     private GTBTextures() {}
 
