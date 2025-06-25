@@ -100,6 +100,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityPrecisionLaser PRECISION_LASER;
     public static MetaTileEntityFlashChromatographySystem FLASH_CHROMATOGRAPHY_SYSTEM;
     public static MetaTileEntityRocketLaunchPad ROCKET_LAUNCH_PAD;
+    public static MetaTileEntityRocketAssemblingMachine ROCKET_ASSEMBLING_MACHINE;
+    public static MetaTileEntityAlloyKiln ALLOY_KILN;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -255,8 +257,12 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityHeatExchanger(gtb("heat_exchanger")));
         PRECISION_LASER = registerMetaTileEntity(3071,
                 new MetaTileEntityPrecisionLaser(gtb("precision_laser")));
-        ROCKET_LAUNCH_PAD = registerMetaTileEntity(3072,
+        ROCKET_ASSEMBLING_MACHINE = registerMetaTileEntity(3072,
+                new MetaTileEntityRocketAssemblingMachine(gtb("rocket_assembling_machine")));
+        ROCKET_LAUNCH_PAD = registerMetaTileEntity(3073,
                 new MetaTileEntityRocketLaunchPad(gtb("rocket_launch_pad")));
+        ALLOY_KILN = registerMetaTileEntity(3074,
+                new MetaTileEntityAlloyKiln(gtb("alloy_kiln")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
