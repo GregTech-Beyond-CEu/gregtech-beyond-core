@@ -354,5 +354,4 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_CRUCIBLE_RECIPES = new RecipeMap<>(
             "advanced_crucible", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
-
 }
