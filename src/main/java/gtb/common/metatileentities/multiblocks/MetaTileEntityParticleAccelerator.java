@@ -42,7 +42,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBBlockWireCoil;
-import gtb.common.block.blocks.GTBMultiblockCasing;
+import gtb.common.block.blocks.GTBMultiblockCasing2;
 import lombok.Getter;
 
 @Getter
@@ -133,8 +133,8 @@ public class MetaTileEntityParticleAccelerator extends RecipeMapMultiblockContro
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('G',
-                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
-                                .getState(GTBMultiblockCasing.CasingType.PARTICLE_PROTECTION_CASING))
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING2
+                                .getState(GTBMultiblockCasing2.CasingType.PARTICLE_PROTECTION_CASING))
                                         .setMinGlobalLimited(116)
                                         .or(autoAbilities()))
                 .where('C', states(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL.getState(GTBBlockWireCoil.GTBCoilType.ADAMANTIUM)))
