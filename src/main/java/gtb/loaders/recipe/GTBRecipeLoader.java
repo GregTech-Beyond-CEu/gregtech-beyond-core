@@ -33,7 +33,5 @@ public final class GTBRecipeLoader {
 
         MachineRecipes.init();
         KevTestRecipes.register();
-
-
     }
 }
