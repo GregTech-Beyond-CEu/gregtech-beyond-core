@@ -49,7 +49,7 @@ import gtb.api.metatileentity.multiblock.KevGeneratorLogic;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBMultiblockDisplayTextUtil;
 import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
+import gtb.common.block.blocks.GTBMultiblockCasing2;
 
 public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
@@ -80,7 +80,7 @@ public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase i
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.LINEAR_ACCELERATOR_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING2.getState(GTBMultiblockCasing2.CasingType.LINEAR_ACCELERATOR_CASING);
     }
 
     public IBlockState getGlassState() {
@@ -88,11 +88,11 @@ public class MetaTileEntityLinearAccelerator extends MultiblockWithDisplayBase i
     }
 
     public IBlockState getBerylliumDetectorState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.BERYLLIUM_DETECTOR_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING2.getState(GTBMultiblockCasing2.CasingType.BERYLLIUM_DETECTOR_CASING);
     }
 
     public IBlockState getNeodymiumMagnetState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.NEODYMIUM_MAGNET_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING2.getState(GTBMultiblockCasing2.CasingType.NEODYMIUM_MAGNET_CASING);
     }
 
     @Override
