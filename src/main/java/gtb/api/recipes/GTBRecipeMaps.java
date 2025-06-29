@@ -338,11 +338,18 @@ public final class GTBRecipeMaps {
             "rocket_launch_pad", 4, 2, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ROCKET_ASSEMBLY_RECIPES = new RecipeMap<>(
-            "rocket_assembly_recipes", 16, 1, 4, 0, new SimpleRecipeBuilder(), false);
+            "rocket_assembly_recipes", 16, 1, 3, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ALLOY_KILN = new RecipeMap<>(
             "alloy_kiln", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CRUCIBLE_RECIPES = new RecipeMap<>(
             "crucible_recipes", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ZONE_REFINER_RECIPES = new RecipeMap<>(
+            "zone_refiner_recipes", 2, 2, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_CRUCIBLE_RECIPES = new RecipeMap<>(
+            "advanced_crucible", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
 }
