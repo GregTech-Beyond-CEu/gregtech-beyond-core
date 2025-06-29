@@ -38,7 +38,11 @@ public class GTBMultiblockCasing2 extends VariantBlock<GTBMultiblockCasing2.Casi
         FUSED_QUARTZ_BLOCK("fused_quartz_block"),
         BLADE_ASSEMBLY_CASING("blade_assembly_casing"),
         ROCKET_BLOCK_BASE("rocket_block_base"),
-        GALVANIZED_PORCELAIN_TILES("galvanized_porcelain_tiles");
+        GALVANIZED_PORCELAIN_TILES("galvanized_porcelain_tiles"),
+        BERYLLIUM_DETECTOR_CASING("beryllium_detector"),
+        NEODYMIUM_MAGNET_CASING("neodymium_magnet"),
+        PARTICLE_PROTECTION_CASING("particle_protection_casing"),
+        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing");
 
         private final String name;
 
