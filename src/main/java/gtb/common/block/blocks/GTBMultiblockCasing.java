@@ -35,8 +35,10 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         CLIMATE_PROOF_CASING("climate_proof_casing"),
         QUANTUM_CASING("quantum_casing"),
         QUANTUM_GLASS("quantum_glass"),
+        PERFECTLY_SEALED_VACUUM_CASING("perfectly_sealed_vacuum_casing"),
         ENGRAVER_CASING("engraver_casing"),
         SUBSTRATE("substrate_casing"),
+        HARD_STONE("hard_stone"),
         BASIC_STRUCTURAL_CASING("basic_structural_casing"),
         ADVANCED_SUBSTRATE("advanced_substrate_casing"),
         VACUUM_FURNACE_CASING("vacuum_furnace_casing"),
@@ -47,7 +49,9 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         BERYLLIUM_DETECTOR_CASING("beryllium_detector"),
         NEODYMIUM_MAGNET_CASING("neodymium_magnet"),
         PARTICLE_PROTECTION_CASING("particle_protection_casing"),
-        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing");
+        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing"),
+        CORROSION_PROOF_CARBON_STEEL_CASING("corrosion_proof_carbon_steel_cbasing"),
+        LEAD_CASING("lead_casing");
 
         private final String name;
 

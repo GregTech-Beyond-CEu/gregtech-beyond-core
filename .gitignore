@@ -83,4 +83,4 @@ run/
 
 logs/
 
-lib/
+lib/groovy*

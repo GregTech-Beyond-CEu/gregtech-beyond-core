@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
@@ -23,19 +23,12 @@ import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityCoker extends NoEnergyMultiController {
+public class MetaTileEntityCoker extends RecipeMapMultiblockController {
 
     public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.COKER_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -58,9 +51,8 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(130)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.Steel))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .build();
@@ -68,20 +60,13 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.SOLID_STEEL_CASING;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)

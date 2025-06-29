@@ -1,7 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
-
 import javax.annotation.Nonnull;
 
 import net.minecraft.block.state.IBlockState;
@@ -15,11 +13,12 @@ import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
+import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import gregtech.common.blocks.*;
 
 import gtb.api.recipes.GTBRecipeMaps;
@@ -38,16 +37,21 @@ public class MetaTileEntityCuringOven extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
                 .aisle("F~F", "~~~", "F~F")
                 .aisle("CSC", "CCC", "CCC")
                 .aisle("~P~", "~P~", "~P~")
                 .where('~', any())
                 .where('S', selfPredicate())
-                .where('C', states(getCasingState()).setMinGlobalLimited(3).or(autoAbilities()))
+                .where('C', states(getCasingState()).setMinGlobalLimited(1).or(autoAbilities()))
                 .where('P', states(getPipeState()))
                 .where('F', frames(Materials.BlackSteel))
                 .build();
+    }
+
+    @Override
+    public TraceabilityPredicate autoAbilities() {
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     private static IBlockState getCasingState() {
@@ -60,7 +64,7 @@ public class MetaTileEntityCuringOven extends RecipeMapMultiblockController {
 
     @Nonnull
     @Override
-    protected SimpleOverlayRenderer getFrontOverlay() {
+    protected OrientedOverlayRenderer getFrontOverlay() {
         return GTBTextures.CURING_OVEN_OVERLAY;
     }
 

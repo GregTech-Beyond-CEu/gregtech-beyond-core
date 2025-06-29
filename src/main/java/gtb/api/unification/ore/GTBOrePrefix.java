@@ -13,6 +13,8 @@ public class GTBOrePrefix {
 
     public static final OrePrefix floated = new OrePrefix("floated", M, null, GTBMaterialIconType.floated,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_FLOATED));
+    public static final OrePrefix concentrate = new OrePrefix("concentrate", M, null, GTBMaterialIconType.concentrate,
+            OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_CONCENTRATE));
     public static final OrePrefix sifted = new OrePrefix("sifted", M, null, GTBMaterialIconType.sifted,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_SIFTED));
     public static final OrePrefix itemCasing = new OrePrefix("item_casing", M / 2, null,
@@ -22,11 +24,14 @@ public class GTBOrePrefix {
             GTBMaterialIconType.seedCrystal,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> !mat.hasFlag(DISABLE_SEED_CRYSTAL) &&
                     (mat.hasProperty(PropertyKey.GEM) || mat.hasFlag(GENERATE_SEED_CRYSTAL)));
-
+    public static final OrePrefix beads = new OrePrefix("beads", M, null, GTBMaterialIconType.beads,
+            OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_BEADS));
     public static final OrePrefix boule = new OrePrefix("boule", -1, null,
             GTBMaterialIconType.boule,
             OrePrefix.Flags.ENABLE_UNIFICATION,
             mat -> !mat.hasFlag(DISABLE_BOULE) && (mat.hasProperty(PropertyKey.GEM) || mat.hasFlag(GENERATE_BOULE)));
+    public static final OrePrefix sponge = new OrePrefix("sponge", M, null, GTBMaterialIconType.sponge,
+            OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_SPONGE));
 
     public static void register() {
         MetaItems.addOrePrefix(GTBOrePrefix.floated);
@@ -34,5 +39,8 @@ public class GTBOrePrefix {
         MetaItems.addOrePrefix(GTBOrePrefix.itemCasing);
         MetaItems.addOrePrefix(GTBOrePrefix.seedCrystal);
         MetaItems.addOrePrefix(GTBOrePrefix.boule);
+        MetaItems.addOrePrefix(GTBOrePrefix.beads);
+        MetaItems.addOrePrefix(GTBOrePrefix.concentrate);
+        MetaItems.addOrePrefix(GTBOrePrefix.sponge);
     }
 }

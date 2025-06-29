@@ -14,7 +14,6 @@ import gtb.api.utils.GTBLog;
 import gtb.common.CommonProxy;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBBlockWireCoil;
-import gtb.common.item.GTBMetaItems;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
 @Mod(modid = GregtechBeyondCore.MODID,
@@ -44,7 +43,6 @@ public class GregtechBeyondCore {
         for (GTBBlockWireCoil.GTBCoilType type : GTBBlockWireCoil.GTBCoilType.values()) {
             HEATING_COILS.put(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL.getState(type), type);
         }
-
         proxy.preLoad();
     }
 }

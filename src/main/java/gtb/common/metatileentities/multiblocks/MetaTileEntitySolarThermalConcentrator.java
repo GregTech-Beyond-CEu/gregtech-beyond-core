@@ -24,9 +24,6 @@ import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
@@ -36,7 +33,6 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -58,7 +54,9 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.STEAM_EXPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.STEAM_IMPORT_ITEMS).setExactLimit(1)))
                 .where('Z', frames(Materials.Bronze))
                 .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
@@ -70,20 +68,13 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, true, true, true, true);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.BRONZE_PLATED_BRICKS;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)

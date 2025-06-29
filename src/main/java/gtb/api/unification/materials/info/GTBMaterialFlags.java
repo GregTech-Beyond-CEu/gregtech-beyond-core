@@ -1,7 +1,7 @@
 package gtb.api.unification.materials.info;
 
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.Materials.Cupronickel;
+import static gtb.api.unification.materials.GTBMaterials.*;
 
 import java.util.Arrays;
 
@@ -16,6 +16,10 @@ import gregtech.api.unification.material.properties.PropertyKey;
 public class GTBMaterialFlags {
 
     public static MaterialFlag GENERATE_SIFTED = (new MaterialFlag.Builder("sifted"))
+            .requireProps(PropertyKey.ORE)
+            .build();
+
+    public static MaterialFlag GENERATE_CONCENTRATE = (new MaterialFlag.Builder("concentrate"))
             .requireProps(PropertyKey.ORE)
             .build();
 
@@ -39,14 +43,21 @@ public class GTBMaterialFlags {
     public static MaterialFlag DISABLE_BOULE = (new MaterialFlag.Builder("disable_crystal"))
             .build();
 
+    public static MaterialFlag GENERATE_BEADS = (new MaterialFlag.Builder("beads"))
+            .build();
+
+    public static MaterialFlag GENERATE_SPONGE = (new MaterialFlag.Builder("sponge"))
+            .build();
+
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
-        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten);
+        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten, Iron, Titanium);
+
+        addFlag(MaterialFlags.GENERATE_FRAME, Lead);
 
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
-
-        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite);
+        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite, Pollucite);
 
         addFlag(GTBMaterialFlags.GENERATE_ITEM_CASING, Steel, Aluminium, StainlessSteel, Titanium, TungstenSteel);
 
@@ -54,6 +65,8 @@ public class GTBMaterialFlags {
                 Dysprosium, Erbium, Gadolinium, Rhenium, Germanium, Strontium, Rutherfordium);
 
         addFlag(DISABLE_BOULE, DISABLE_SEED_CRYSTAL, Coke, Charcoal, Salt, RockSalt, Coal, Sugar, Flint);
+
+        addFlag(GENERATE_SPONGE, Titanium);
     }
 
     private static void addFlag(MaterialFlag flag, Material... materials) {

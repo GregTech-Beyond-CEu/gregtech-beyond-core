@@ -21,18 +21,12 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.*;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityEngravingUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.ENGRAVING_UNIT_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -82,20 +76,13 @@ public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.CLEAN_STAINLESS_STEEL_CASING;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)
