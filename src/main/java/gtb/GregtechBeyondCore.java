@@ -36,7 +36,6 @@ public class GregtechBeyondCore {
         GTBLog.init(event.getModLog());
 
         GTBTileCapabilities.register();
-        GTBMetaItems.init();
         GTBMetaBlocks.init();
         GTBMetaTileEntities.init();
 
