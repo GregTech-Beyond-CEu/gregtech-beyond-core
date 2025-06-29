@@ -48,9 +48,9 @@ public final class GTBTextures {
     public static SimpleOverlayRenderer KEV_HATCH_INPUT_OVERLAY = new SimpleOverlayRenderer(
             "hatches/kev_multiblock_hatch/input_overlay");
     public static SimpleOverlayRenderer PARTICLE_PROTECTION_CASING_OVERLAY = new SimpleOverlayRenderer(
-            "gtb_multiblock_casing/particle_protection_casing");
+            "gtb_multiblock_casing2/particle_protection_casing");
     public static SimpleOverlayRenderer LINEAR_ACCELERATOR_CASING_OVERLAY = new SimpleOverlayRenderer(
-            "gtb_multiblock_casing/linear_accelerator_casing");
+            "gtb_multiblock_casing2/linear_accelerator_casing");
     public static SimpleOverlayRenderer CORROSION_PROOF_CARBON_STEEL_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/corrosion_proof_carbon_steel_casing");
     public static OrientedOverlayRenderer BEAM_SHRINKING_DEVICE_OVERLAY = new OrientedOverlayRenderer(
