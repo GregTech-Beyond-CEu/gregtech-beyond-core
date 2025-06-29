@@ -124,6 +124,8 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] BATCH_REACTOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] CONTINOUS_STIRRING_TANK_REACTOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] TRICKLE_BED_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ZONE_REFINER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ADVANCED_CRUCIBLE = new SimpleMachineMetaTileEntity[15];
 
     public static final int MAX_BASIC_MACHINES = 100;
     public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
@@ -357,6 +359,18 @@ public final class GTBMetaTileEntities {
                 CONTINOUS_STIRRING_TANK_REACTOR, 4400, "cstr",
                 GTBRecipeMaps.CONTINOUS_STIRRING_TANK_REACTOR_RECIPES,
                 GTBTextures.CONTINOUS_STIRRING_TANK_REACTOR_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                ZONE_REFINER, 4420, "zone_refiner",
+                GTBRecipeMaps.ZONE_REFINER_RECIPES,
+                GTBTextures.CONTINOUS_STIRRING_TANK_REACTOR_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                ADVANCED_CRUCIBLE, 4440, "advanced_crucible",
+                GTBRecipeMaps.ADVANCED_CRUCIBLE_RECIPES,
+                Textures.CANNER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         /**
