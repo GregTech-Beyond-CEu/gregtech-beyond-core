@@ -18,11 +18,10 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.BlockWireCoil;
 import gregtech.common.blocks.MetaBlocks;
 
 import gregicality.multiblocks.api.unification.GCYMMaterials;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 
 import gtb.api.recipes.GTBRecipeMaps;
 
@@ -51,8 +50,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
                                 .getBlock(GCYMMaterials.MaragingSteel300)))
                 .where('C', states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN)))
                 .where('K',
-                        states(GCYMMetaBlocks.UNIQUE_CASING
-                                .getState(BlockUniqueCasing.UniqueCasingType.MOLYBDENUM_DISILICIDE_COIL)))
+                        states(MetaBlocks.WIRE_COIL.getState(BlockWireCoil.CoilType.NICHROME)))
                 .where('M', abilities(MultiblockAbility.MUFFLER_HATCH))
                 .where(' ', any())
                 .where('#', air())
