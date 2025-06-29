@@ -49,6 +49,30 @@
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing2/sonicator_casing"
         }
+      },
+      "beryllium_detector" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/beryllium_detector"
+        }
+      },
+      "neodymium_magnet" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/neodymium_magnet"
+        }
+      },
+      "particle_protection_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/particle_protection_casing"
+        }
+      },
+      "linear_accelerator_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/linear_accelerator_casing"
+        }
       }
     }
   }
