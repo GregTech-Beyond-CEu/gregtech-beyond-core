@@ -41,6 +41,8 @@ tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Cas
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
+tile.gtb_multiblock_casing.beryllium_detector.name=Beryllium Detector
+tile.gtb_multiblock_casing.neodymium_magnet.name=Neodymium Magnet
 tile.gtb_multiblock_casing.corrosion_proof_carbon_steel_casing.name=Corrosion Proof Carbon Steel Casing
 
 # Singleblock machinery
@@ -306,6 +308,106 @@ recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
 recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
+recipemap.particle_accelerator_recipes.name=Particle Accelerator
+
+# Recipe properties
+gregtech.recipe.kev=Neutron Kinetic Energy: %d kEv
+
+# Singleblock machinery
+
+gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
+gtb.machine.rotary_evaporator.mv.name=Advanced Rotary Evaporator
+gtb.machine.rotary_evaporator.hv.name=Advanced Rotary Evaporator II
+gtb.machine.rotary_evaporator.ev.name=Advanced Rotary Evaporator III
+gtb.machine.rotary_evaporator.iv.name=Elite Rotary Evaporator
+gtb.machine.rotary_evaporator.luv.name=Elite Rotary Evaporator II
+gtb.machine.rotary_evaporator.zpm.name=Elite Rotary Evaporator III
+gtb.machine.rotary_evaporator.uv.name=Ultimate Rotary Evaporator
+
+gtb.machine.microscope.lv.name=Basic Microscope
+gtb.machine.microscope.mv.name=Advanced Microscope
+gtb.machine.microscope.hv.name=Advanced Microscope II
+gtb.machine.microscope.ev.name=Advanced Microscope III
+gtb.machine.microscope.iv.name=Elite Microscope
+gtb.machine.microscope.luv.name=Elite Microscope II
+gtb.machine.microscope.zpm.name=Elite Microscope III
+gtb.machine.microscope.uv.name=Ultimate Microscope
+
+gtb.machine.crystallizers.lv.name=Basic Crystallizer
+gtb.machine.crystallizers.mv.name=Advanced Crystallizer
+gtb.machine.crystallizers.hv.name=Advanced Crystallizer II
+gtb.machine.crystallizers.ev.name=Advanced Crystallizer III
+gtb.machine.crystallizers.iv.name=Elite Crystallizer
+gtb.machine.crystallizers.luv.name=Elite Crystallizer II
+gtb.machine.crystallizers.zpm.name=Elite Crystallizer III
+gtb.machine.crystallizers.uv.name=Ultimate Crystallizer
+
+gtb.machine.dehydrator.lv.name=Basic Dehydrator
+gtb.machine.dehydrator.mv.name=Advanced Dehydrator
+gtb.machine.dehydrator.hv.name=Advanced Dehydrator II
+gtb.machine.dehydrator.ev.name=Advanced Dehydrator III
+gtb.machine.dehydrator.iv.name=Elite Dehydrator
+gtb.machine.dehydrator.luv.name=Elite Dehydrator II
+gtb.machine.dehydrator.zpm.name=Elite Dehydrator III
+gtb.machine.dehydrator.uv.name=Ultimate Dehydrator
+
+gtb.machine.roaster.lv.name=Basic Roaster
+gtb.machine.roaster.mv.name=Advanced Roaster
+gtb.machine.roaster.hv.name=Advanced Roaster II
+gtb.machine.roaster.ev.name=Advanced Roaster III
+gtb.machine.roaster.iv.name=Elite Roaster
+gtb.machine.roaster.luv.name=Elite Roaster II
+gtb.machine.roaster.zpm.name=Elite Roaster III
+gtb.machine.roaster.uv.name=Ultimate Roaster
+
+gtb.machine.cvd_unit.lv.name=Basic CVD Unit
+gtb.machine.cvd_unit.mv.name=Advanced CVD Unit
+gtb.machine.cvd_unit.hv.name=Advanced CVD Unit II
+gtb.machine.cvd_unit.ev.name=Advanced CVD Unit III
+gtb.machine.cvd_unit.iv.name=Elite CVD Unit
+gtb.machine.cvd_unit.luv.name=Elite CVD Unit II
+gtb.machine.cvd_unit.zpm.name=Elite CVD Unit III
+gtb.machine.cvd_unit.uv.name=Ultimate CVD Unit
+
+gtb.machine.ion_implanter.lv.name=Basic Ion Implanter
+gtb.machine.ion_implanter.mv.name=Advanced Ion Implanter
+gtb.machine.ion_implanter.hv.name=Advanced Ion Implanter II
+gtb.machine.ion_implanter.ev.name=Advanced Ion Implanter III
+gtb.machine.ion_implanter.iv.name=Elite Ion Implanter
+gtb.machine.ion_implanter.luv.name=Elite Ion Implanter II
+gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter III
+gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter
+
+gtb.machine.dryer.lv.name=Basic Dryer
+gtb.machine.dryer.mv.name=Advanced Dryer
+gtb.machine.dryer.hv.name=Advanced Dryer  II
+gtb.machine.dryer.ev.name=Advanced Dryer III
+gtb.machine.dryer.iv.name=Elite Dryer
+gtb.machine.dryer.luv.name=Elite Dryer II
+gtb.machine.dryer.zpm.name=Elite Dryer III
+gtb.machine.dryer.uv.name=Ultimate Dryer
+
+gtb.machine.bio_reactor_single.lv.name=Basic Bio Reactor
+gtb.machine.bio_reactor_single.mv.name=Advanced Bio Reactor
+gtb.machine.bio_reactor_single.hv.name=Advanced Bio Reactor II
+gtb.machine.bio_reactor_single.ev.name=Advanced Bio Reactor III
+gtb.machine.bio_reactor_single.iv.name=Elite Bio Reactor
+
+gtb.machine.vacuum_ejector.lv.name=Basic Vacuum Ejector
+gtb.machine.vacuum_ejector.mv.name=Advanced Vacuum Ejector
+gtb.machine.vacuum_ejector.hv.name=Advanced Vacuum Ejector II
+
+gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
+
+gtb.machine.kev_output_hatch.name=kEv Output Hatch
+gtb.machine.kev_input_hatch.name=kEv Input Hatch
 recipemap.cold_tower.name=Cold Tower Recipes
 recipemap.hot_tower.name=Hot Tower Recipes
 recipemap.mocvd_unit_recipes.name=MOCVD Unit Recipes
@@ -368,6 +470,11 @@ gtb.machine.condensation_unit.name=Condensation Unit
 gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
 gtb.machine.gravity_separator.name=Gravity Separator
+gtb.machine.linear_accelerator.name=Linear Accelerator
+gtb.machine.particle_accelerator.name=Particle Accelerator
+
+# MetaItems
+
 gtb.machine.vacuum_metallizer.name=Vacuum Metallizer
 gtb.machine.high_temp_polymerization_tank.name=High-Temperature Polymerization Tank
 gtb.machine.vis_breaker.name=Vis Breaker
@@ -390,6 +497,12 @@ gregtech.material.temporally_constrained_anti_matter=Temporally Constrained Anti
 gregtech.material.pikyonium=Pikyonium
 gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed Matter
 
+gregtech.material.perfluoropolyether_k=Perfluoropolyether K (PFPE)
+gregtech.material.f_li_be=FLiBe
+gregtech.material.ln=LN
+gregtech.material.biphenyl_diphenyl_ether=Biphenyl-Diphenyl Ether
+gregtech.material.fc_40=FC-40
+gregtech.material.mnovec=3M Novec
 
 
 
@@ -398,6 +511,79 @@ gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed Matter
 
 #Cooling Coils
 
+
+
+
+
+
+
+
+
+# Multiblock display information
+
+gtb.multiblock.kev_generator.cooling=Cooling: %d
+gtb.multiblock.kev_generator.kev_production=Producing %d kEv
+gtb.multiblock.kev_generator.kev_production.expected=Will produce %d kEv
+gtb.multiblock.kev_reception=Receiving %d kEv
+gtb.multiblock.kev_reception.none=No kEv source found
+
+
+# Tooltips
+gtb.machine.kev_cooler.cooling_amount=Reduces the produced §akEv §fby §b%d
+
+
+gtb.machine.kev_cooler.gregtech.material.perfluoropolyether_k.name=PFPE Cooler
+gtb.machine.kev_cooler.gregtech.material.f_li_be.name=FLiBe Cooler
+gtb.machine.kev_cooler.gregtech.material.ln.name=LN Cooler
+gtb.machine.kev_cooler.gregtech.material.biphenyl_diphenyl_ether.name=Biphenyl-Diphenyl Ether Cooler
+gtb.machine.kev_cooler.gregtech.material.fc_40.name=FC-40 Cooler
+gtb.machine.kev_cooler.gregtech.material.mnovec.name=3M Novec Cooler
+
+gtb.machine.kev_generator.usage=Accelerates particles.
+gtb.machine.kev_generator.base_kev_production=Base production: §a%d kEv§r.
+gtb.machine.kev_generator.coolers.tooltip=Production can be reduced by placing §bCoolers§r.
+gtb.machine.kev_generator.output_hatch.tooltip=To work properly, the Kev output hatch must face a Kev input hatch within a free 20 blocks straight line.
+
+gtb.machine.kev_consumer.usage=Write something interesting.
+gtb.machine.kev_consumer.generator.tooltip=To work properly, use a §fLinear Accelerator§7 to accelerate the particles.
+gtb.machine.kev_consumer.recipe.tooltip=The value received must match §6EXACTLY§7 the value of the recipe. Otherwise the recipe will not start or fail.
+gtb.machine.kev_consumer.fail_recipe.tooltip=If the recipe fails, it outputs %s.
+
+
+
+
+
+
+
+
+
+gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
+gregtech.material.cold_air=Cold Air
+gregtech.material.supercooled_liquid_nitrogen=Supercooled Liquid Nitrogen
+gregtech.material.untreated_liquid_oxygen=Untreated Liquid Oxygen
+gregtech.material.cold_waste_gaseous_nitrogen=Cold Waste Gaseous Nitrogen
+gregtech.material.cold_gaseous_nitrogen=Cold Gaseous Nitrogen
+gregtech.material.argon_rich_gas=Argon Rich Gas
+gregtech.material.crude_argon_vapor=Crude Argon Vapor
+gregtech.material.supercooled_oxygen=Supercooled Oxygen
+gregtech.material.liquid_waste_nitrogen=Liquid Waste Nitrogen
+gregtech.material.rare_gas_rich_gaseous_nitrogen=Rare Gas Rich Gaseous Nitrogen
+gregtech.material.rare_gas_mixture=Rare Gas Mixture
+gregtech.material.liquid_krypton=Liquid Krypton
+gregtech.material.nitrogen_stripped_rare_gas_mixture=Nitrogen Stripped Rare Gas Mixture
+gregtech.material.crude_krypton=Crude Krypton
+gregtech.material.crude_neon=Crude Neon
+gregtech.material.crude_helium=Crude Helium
+gregtech.material.crude_xenon=Crude Xenon
+gregtech.material.crude_argon=Crude Argon
+gregtech.material.partially_liquid_krypton=Partially Liquid Krypton
+gregtech.material.partially_liquid_neon=Partially Liquid Neon
+gregtech.material.partially_liquid_helium=Partially Liquid Helium
+gregtech.material.partially_liquid_xenon=Partially Liquid Xenon
+gregtech.material.partially_liquid_argon=Partially Liquid Argon
+gregtech.material.liquid_argon=Liquid Argon
+gregtech.material.liquid_neon=Liquid Neon
+gregtech.material.cold_gaseous_oxygen=Cold Gaseous Oxygen
 tile.cooling_coil.tooltip_temperature=Cooling Capabilites %K
 gtb.multiblock.coke_oven.hatch_position.tooltip.hold_ctrl=Hold CTRL to show additional Structure Information
 gtb.multiblock.coke_oven.hatch_position.tooltip=§fCoke Oven Hatches can be in the §aMIDDLE§f of each side but §cNOT§f in§c edges§f.

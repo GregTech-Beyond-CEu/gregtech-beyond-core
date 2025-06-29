@@ -39,10 +39,20 @@ public final class GTBTextures {
             "multiblock/cvd_unit");
     public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/large_cvd_unit");
+    public static SimpleOverlayRenderer CURING_OVEN_OVERLAY = new SimpleOverlayRenderer(
+            "multiblock/curing_oven");
+    public static final SimpleOverlayRenderer KEV_MULTIBLOCK_HATCH = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/cube_all");
+    public static SimpleOverlayRenderer KEV_HATCH_OUTPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/output_overlay");
+    public static SimpleOverlayRenderer KEV_HATCH_INPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/input_overlay");
+    public static SimpleOverlayRenderer PARTICLE_PROTECTION_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/particle_protection_casing");
+    public static SimpleOverlayRenderer LINEAR_ACCELERATOR_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/linear_accelerator_casing");
     public static SimpleOverlayRenderer CORROSION_PROOF_CARBON_STEEL_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/corrosion_proof_carbon_steel_casing");
-    public static final OrientedOverlayRenderer CURING_OVEN_OVERLAY = new OrientedOverlayRenderer(
-            "machines/curing_oven");
     public static OrientedOverlayRenderer BEAM_SHRINKING_DEVICE_OVERLAY = new OrientedOverlayRenderer(
             "machines/beam_shrinking_device");
     public static OrientedOverlayRenderer VACUUM_EJECTOR_OVERLAY = new OrientedOverlayRenderer(

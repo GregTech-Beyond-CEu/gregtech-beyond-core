@@ -32,5 +32,8 @@ public final class GTBRecipeLoader {
         RecipeMaps.BLAST_RECIPES.setMaxFluidOutputs(2);
 
         MachineRecipes.init();
+        KevTestRecipes.register();
+
+
     }
 }

@@ -15,7 +15,10 @@ import crafttweaker.annotations.ZenRegister;
 import gtb.api.metatileentity.BasicSteamMachine;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
+import gtb.api.unification.materials.GTBMaterials;
 import gtb.api.utils.GTBUtil;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevCooler;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevHatch;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -69,6 +72,10 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolysisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
+    public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
+    public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
+    public static MetaTileEntityLinearAccelerator LINEAR_ACCELERATOR;
+    public static MetaTileEntityParticleAccelerator PARTICLE_ACCELERATOR;
     public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
     public static MetaTileEntityVisBreaker VIS_BREAKER;
     public static MetaTileEntityVacuumMetallizer VACUUM_METALLIZER;
@@ -114,6 +121,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
     public static SimpleMachineMetaTileEntity[] VACUUM_EJECTOR = new SimpleMachineMetaTileEntity[4];
+    public static MetaTileEntityKevCooler[] KEV_COOLERS = new MetaTileEntityKevCooler[6];
     public static SimpleMachineMetaTileEntity[] ION_EXCHANGE_UNIT = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] UV_LIGHT = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15];
@@ -201,69 +209,83 @@ public final class GTBMetaTileEntities {
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolysisTank(gtb("enzymatic_hydrolysis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
-        CATALYTIC_CRACKING_UNIT = registerMetaTileEntity(3040,
+        KEV_OUTPUT_HATCH = registerMetaTileEntity(3040, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
+        KEV_INPUT_HATCH = registerMetaTileEntity(3041, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
+        LINEAR_ACCELERATOR = registerMetaTileEntity(3042,
+                new MetaTileEntityLinearAccelerator(gtb("linear_accelerator")));
+        PARTICLE_ACCELERATOR = registerMetaTileEntity(3043,
+                new MetaTileEntityParticleAccelerator(gtb("particle_accelerator")));
+        KEV_COOLERS[0] = registerMetaTileEntity(3044, new MetaTileEntityKevCooler(GTBMaterials.LN, 1));
+        KEV_COOLERS[1] = registerMetaTileEntity(3045, new MetaTileEntityKevCooler(GTBMaterials.FLiBe, 5));
+        KEV_COOLERS[2] = registerMetaTileEntity(3046, new MetaTileEntityKevCooler(GTBMaterials.MNovec, 10));
+        KEV_COOLERS[3] = registerMetaTileEntity(3047,
+                new MetaTileEntityKevCooler(GTBMaterials.BiphenylDiphenylEther, 20));
+        KEV_COOLERS[4] = registerMetaTileEntity(3048, new MetaTileEntityKevCooler(GTBMaterials.Fc_40, 30));
+        KEV_COOLERS[5] = registerMetaTileEntity(3049,
+                new MetaTileEntityKevCooler(GTBMaterials.PerfluoropolyetherK, 50));
+        CATALYTIC_CRACKING_UNIT = registerMetaTileEntity(3050,
                 new MetaTileEntityCatalyticCrackingUnit(gtb("catalytic_cracking_unit")));
-        GRAVITY_SETTLER_TANK = registerMetaTileEntity(3042,
+        GRAVITY_SETTLER_TANK = registerMetaTileEntity(3051,
                 new MetaTileEntityGravitySettlerTank(gtb("gravity_settler_tank")));
-        VIS_BREAKER = registerMetaTileEntity(3043, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
-        VACUUM_METALLIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetallizer(gtb("vacuum_metallizer")));
-        OXIDATION_FURNACE = registerMetaTileEntity(3045, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
-        MOCVD_UNIT = registerMetaTileEntity(3046, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
-        HIGH_TEMP_POLYMERIZATION_TANK = registerMetaTileEntity(3047,
+        VIS_BREAKER = registerMetaTileEntity(3052, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
+        VACUUM_METALLIZER = registerMetaTileEntity(3053, new MetaTileEntityVacuumMetallizer(gtb("vacuum_metallizer")));
+        OXIDATION_FURNACE = registerMetaTileEntity(3054, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
+        MOCVD_UNIT = registerMetaTileEntity(3055, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
+        HIGH_TEMP_POLYMERIZATION_TANK = registerMetaTileEntity(3056,
                 new MetaTileEntityHighTemperaturePolymerizationTank(gtb("high_temp_polymerization_tank")));
-        ELECTROWINNING_CELL = registerMetaTileEntity(3048,
+        ELECTROWINNING_CELL = registerMetaTileEntity(3057,
                 new MetaTileEntityElectrowinningCell(gtb("electrowinning_cell")));
-        HOT_TOWER = registerMetaTileEntity(3049,
+        HOT_TOWER = registerMetaTileEntity(3058,
                 new MetaTileEntityHotTower(gtb("hot_tower")));
-        COLD_TOWER = registerMetaTileEntity(3050,
+        COLD_TOWER = registerMetaTileEntity(3059,
                 new MetaTileEntityColdTower(gtb("cold_tower")));
-        SEALED_REACTION_CHAMBER = registerMetaTileEntity(3051,
+        SEALED_REACTION_CHAMBER = registerMetaTileEntity(3060,
                 new MetaTileEntitySealedReactionChamber(gtb("sealed_reaction_chamber")));
-        METEORITE_PREDICTION_MATRIX = registerMetaTileEntity(3052,
+        METEORITE_PREDICTION_MATRIX = registerMetaTileEntity(3062,
                 new MetaTileEntityMeteoritePredictionMatrix(gtb("meteorite_prediction_matrix")));
-        METEORITE_MINING_STATION = registerMetaTileEntity(3053,
+        METEORITE_MINING_STATION = registerMetaTileEntity(3063,
                 new MetaTileEntityMeteoriteMiningStation(gtb("meteorite_mining_station")));
-        FRACTIONAL_DISTILLATION_UNIT = registerMetaTileEntity(3054,
+        FRACTIONAL_DISTILLATION_UNIT = registerMetaTileEntity(3064,
                 new MetaTileEntityFractionalDistillationUnit(gtb("fractional_distillation_unit")));
-        LARGE_BLOOMERY = registerMetaTileEntity(3055,
+        LARGE_BLOOMERY = registerMetaTileEntity(3065,
                 new MetaTileEntityLargeBloomery(gtb("large_bloomery")));
-        TUBE_IN_TUBE_REACTOR = registerMetaTileEntity(3056,
+        TUBE_IN_TUBE_REACTOR = registerMetaTileEntity(3066,
                 new MetaTileEntityTubeInTubeReactor(gtb("tube_in_tube_reactor")));
-        ADSORPTION_TOWER = registerMetaTileEntity(3057,
+        ADSORPTION_TOWER = registerMetaTileEntity(3067,
                 new MetaTileEntityAdsorptionTower(gtb("adsorption_tower")));
-        REACTIVE_ION_ETCHER = registerMetaTileEntity(3058,
+        REACTIVE_ION_ETCHER = registerMetaTileEntity(3068,
                 new MetaTileEntityReactiveIonEtcher(gtb("reactive_ion_etcher")));
-        PVD_UNIT = registerMetaTileEntity(3059,
+        PVD_UNIT = registerMetaTileEntity(3069,
                 new MetaTileEntityPVDUnit(gtb("pvd_unit")));
-        BLENDER = registerMetaTileEntity(3060,
+        BLENDER = registerMetaTileEntity(3070,
                 new MetaTileEntityBlender(gtb("blender")));
-        SONICATOR = registerMetaTileEntity(3061,
+        SONICATOR = registerMetaTileEntity(3071,
                 new MetaTileEntitySonicator(gtb("sonciator")));
-        ELECTRON_BEAM_LITHOGRAPHER_MULTI = registerMetaTileEntity(3062,
+        ELECTRON_BEAM_LITHOGRAPHER_MULTI = registerMetaTileEntity(3072,
                 new MetaTileEntityElectronBeamLithographer(gtb("electron_beam_lithographer_multi")));
-        HIGH_VACUUM_EVAPORATION_SYSTEM = registerMetaTileEntity(3063,
+        HIGH_VACUUM_EVAPORATION_SYSTEM = registerMetaTileEntity(3073,
                 new MetaTileEntityHighVacuumEvaporationSystem(gtb("high_vacuum_evaporation_system")));
-        CRYSTALLIZATION_CRUICIBLE = registerMetaTileEntity(3064,
+        CRYSTALLIZATION_CRUICIBLE = registerMetaTileEntity(3074,
                 new MetaTileEntityCrystallizationCruicible(gtb("crystallization_cruicible")));
-        ATOMIC_LAYER_DEPOSITION_SYSTEM = registerMetaTileEntity(3065,
+        ATOMIC_LAYER_DEPOSITION_SYSTEM = registerMetaTileEntity(3075,
                 new MetaTileEntityAtomicLayerDepositionSystem(gtb("atomic_layer_deposition")));
-        DRYING_COLUMN = registerMetaTileEntity(3066,
+        DRYING_COLUMN = registerMetaTileEntity(3076,
                 new MetaTileEntityDryingColumn(gtb("drying_column")));
-        FLUIDIZED_BED_REACTOR = registerMetaTileEntity(3067,
+        FLUIDIZED_BED_REACTOR = registerMetaTileEntity(3077,
                 new MetaTileEntityFluidizedBedReactor(gtb("fbr")));
-        FLASH_CHROMATOGRAPHY_SYSTEM = registerMetaTileEntity(3068,
+        FLASH_CHROMATOGRAPHY_SYSTEM = registerMetaTileEntity(3078,
                 new MetaTileEntityFlashChromatographySystem(gtb("flash_chromatography_system")));
-        TUBE_FURNACE = registerMetaTileEntity(3069,
+        TUBE_FURNACE = registerMetaTileEntity(3079,
                 new MetaTileEntityTubeFurnace(gtb("tube_furnace")));
-        HEAT_EXCHANGER = registerMetaTileEntity(3070,
+        HEAT_EXCHANGER = registerMetaTileEntity(3080,
                 new MetaTileEntityHeatExchanger(gtb("heat_exchanger")));
-        PRECISION_LASER = registerMetaTileEntity(3071,
+        PRECISION_LASER = registerMetaTileEntity(3081,
                 new MetaTileEntityPrecisionLaser(gtb("precision_laser")));
-        ROCKET_ASSEMBLING_MACHINE = registerMetaTileEntity(3072,
+        ROCKET_ASSEMBLING_MACHINE = registerMetaTileEntity(3082,
                 new MetaTileEntityRocketAssemblingMachine(gtb("rocket_assembling_machine")));
-        ROCKET_LAUNCH_PAD = registerMetaTileEntity(3073,
+        ROCKET_LAUNCH_PAD = registerMetaTileEntity(3083,
                 new MetaTileEntityRocketLaunchPad(gtb("rocket_launch_pad")));
-        ALLOY_KILN = registerMetaTileEntity(3074,
+        ALLOY_KILN = registerMetaTileEntity(3084,
                 new MetaTileEntityAlloyKiln(gtb("alloy_kiln")));
 
         registerSimpleMetaTileEntity(

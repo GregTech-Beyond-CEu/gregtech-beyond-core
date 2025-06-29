@@ -46,7 +46,11 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         BIOLOGICALLY_STERILE_CASING("biologically_sterile_casing"),
         FULLERENE_POLYMER_TETRIX_CASING("fullerene_polymer_tetrix_casing"),
         GRAVITY_SEPARATOR_ROTOR_BLOCK("gravity_separator_rotor_block"),
-        CORROSION_PROOF_CARBON_STEEL_CASING("corrosion_proof_carbon_steel_casing"),
+        BERYLLIUM_DETECTOR_CASING("beryllium_detector"),
+        NEODYMIUM_MAGNET_CASING("neodymium_magnet"),
+        PARTICLE_PROTECTION_CASING("particle_protection_casing"),
+        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing"),
+        CORROSION_PROOF_CARBON_STEEL_CASING("corrosion_proof_carbon_steel_cbasing"),
         LEAD_CASING("lead_casing");
 
         private final String name;
