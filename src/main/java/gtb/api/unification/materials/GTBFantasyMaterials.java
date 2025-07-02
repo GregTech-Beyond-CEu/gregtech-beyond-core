@@ -1,5 +1,7 @@
 package gtb.api.unification.materials;
 
+import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
@@ -62,6 +64,13 @@ public class GTBFantasyMaterials {
                 .color(0x767676)
                 .build().setFormula("Cu12As4S13", true);
 
+        Zirkelite = new Material.Builder(getMaterialsId(), gregtechId("zirkelite"))
+                .dust()
+                .ore()
+                .flags(GENERATE_FLOATED, GENERATE_SIFTED, GENERATE_CONCENTRATE)
+                .color(0x908492)
+                .build().setFormula("Ca2Th2CeZr7(TiO2)6Nb4O10", true);
+
         Xenotime = new Material.Builder(getMaterialsId(), gregtechId("xenotime"))
                 .dust()
                 .ore()
@@ -69,12 +78,13 @@ public class GTBFantasyMaterials {
                 .color(0xF98B69)
                 .build().setFormula("REE", true);
 
-        Zirkelite = new Material.Builder(getMaterialsId(), gregtechId("zirkelite"))
+        SilverAlloy = new Material.Builder(getMaterialsId(), gregtechId("silver_alloy"))
+                .fluid()
                 .dust()
-                .ore()
-                .flags(GENERATE_FLOATED, GENERATE_SIFTED, GENERATE_CONCENTRATE)
-                .color(0x908492)
-                .build().setFormula("Ca2Th2CeZr7(TiO2)6Nb4O10", true);
+                .ingot()
+                .flags(GENERATE_FOIL, GENERATE_PLATE)
+                .color(0x605856)
+                .build().setFormula("AgCuAu", true);
     }
 
     private static int getMaterialsId() {
