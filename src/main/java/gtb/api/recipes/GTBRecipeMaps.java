@@ -354,4 +354,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_CRUCIBLE_RECIPES = new RecipeMap<>(
             "advanced_crucible", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DESICCATOR_RECIPES = new RecipeMap<>(
+            "vacuum_desiccator_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
 }
