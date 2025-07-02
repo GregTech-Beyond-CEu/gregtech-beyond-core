@@ -45,7 +45,6 @@ public class MachineRecipes {
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .input(foil, Polybenzimidazole, 32)
-                .input(plate, Grisium, 32)
                 .input(stickLong, Cupronickel, 32)
                 .input(pipeLargeFluid, Polytetrafluoroethylene, 8)
                 .input(MetaBlocks.BOILER_CASING
