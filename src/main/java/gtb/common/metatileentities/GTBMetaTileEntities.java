@@ -109,6 +109,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityRocketLaunchPad ROCKET_LAUNCH_PAD;
     public static MetaTileEntityRocketAssemblingMachine ROCKET_ASSEMBLING_MACHINE;
     public static MetaTileEntityAlloyKiln ALLOY_KILN;
+    public static MetaTileEntityVacuumDesiccator VACUUM_DESICCATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -287,6 +288,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityRocketLaunchPad(gtb("rocket_launch_pad")));
         ALLOY_KILN = registerMetaTileEntity(3084,
                 new MetaTileEntityAlloyKiln(gtb("alloy_kiln")));
+        VACUUM_DESICCATOR = registerMetaTileEntity(3085,
+                new MetaTileEntityVacuumDesiccator(gtb("vacuum_desiccator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
