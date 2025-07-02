@@ -6,8 +6,6 @@ import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterials {
 
-    public static Material SilverAlloy;
-    public static Material Grisium;
     public static Material NuclearWaste;
 
     // Fantasy Materials
@@ -21,14 +19,8 @@ public class GTBMaterials {
     public static Material Pikyonium;
     public static Material Tenannite;
     public static Material Xenotime;
+    public static Material SilverAlloy;
     public static Material Zirkelite;
-    // SD Materials
-
-    // Unknown Materials
-
-    // Organic Chemistry Materials
-
-    // Fantasy Materials
 
     // Kev Coolers Materials
     public static Material LN;
@@ -44,6 +36,5 @@ public class GTBMaterials {
         GTBKevCoolersMaterials.register();
         GTBMaterialPropertyAddition.init();
         GTBMaterialIconSet.set();
-        GTBFantasyMaterials.init();
     }
 }
