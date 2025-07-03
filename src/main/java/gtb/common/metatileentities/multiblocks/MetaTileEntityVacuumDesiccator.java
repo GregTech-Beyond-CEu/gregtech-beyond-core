@@ -1,5 +1,12 @@
 package gtb.common.metatileentities.multiblocks;
 
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -13,12 +20,8 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockGlassCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
+
 import gtb.api.recipes.GTBRecipeMaps;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import org.jetbrains.annotations.NotNull;
 
 public class MetaTileEntityVacuumDesiccator extends RecipeMapMultiblockController {
 
@@ -33,7 +36,7 @@ public class MetaTileEntityVacuumDesiccator extends RecipeMapMultiblockControlle
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC", "CCC", "CCC")
+                .aisle("CCC", "CCC", "CSC")
                 .aisle("GGG", "G~G", "GGG")
                 .aisle("GGG", "G~G", "GGG")
                 .aisle("~G~", "GGG", "~G~")
