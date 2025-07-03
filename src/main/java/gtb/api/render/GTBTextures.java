@@ -39,7 +39,7 @@ public final class GTBTextures {
             "multiblock/cvd_unit");
     public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/large_cvd_unit");
-    public static SimpleOverlayRenderer CURING_OVEN_OVERLAY = new SimpleOverlayRenderer(
+    public static OrientedOverlayRenderer CURING_OVEN_OVERLAY = new OrientedOverlayRenderer(
             "multiblock/curing_oven");
     public static final SimpleOverlayRenderer KEV_MULTIBLOCK_HATCH = new SimpleOverlayRenderer(
             "hatches/kev_multiblock_hatch/cube_all");
