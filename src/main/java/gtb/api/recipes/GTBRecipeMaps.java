@@ -357,5 +357,4 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DESICCATOR_RECIPES = new RecipeMap<>(
             "vacuum_desiccator_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
-
 }
