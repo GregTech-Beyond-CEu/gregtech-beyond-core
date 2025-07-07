@@ -34,8 +34,8 @@ public class MetaTileEntityHeatExchanger extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle("CCCCC", "CCCCC", "CCSCC")
-                .aisle("CCCCC", "C~~~C", "CCCCC")
+                .aisle("CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", "C~~~C", "CCSCC")
                 .aisle("CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', air())
