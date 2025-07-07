@@ -39,9 +39,6 @@ public class GTBMaterialPropertyAddition {
         BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
         PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
 
-        // Zirconium
-        Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
-
         // Graphene
 
         Graphene.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -75,10 +72,6 @@ public class GTBMaterialPropertyAddition {
         // Germanium
 
         Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
-
-        // Strontium
-
-        Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Rutherfordium
         Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
