@@ -389,7 +389,7 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 ZONE_REFINER, 4420, "zone_refiner",
                 GTBRecipeMaps.ZONE_REFINER_RECIPES,
-                GTBTextures.CONTINOUS_STIRRING_TANK_REACTOR_OVERLAY,
+                GTBTextures.ZONE_REFINER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
