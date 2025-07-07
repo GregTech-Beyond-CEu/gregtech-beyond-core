@@ -61,6 +61,8 @@ public final class GTBTextures {
             "machines/dryer");
     public static OrientedOverlayRenderer ROASTER_OVERLAY = new OrientedOverlayRenderer(
             "machines/roasters");
+    public static OrientedOverlayRenderer ZONE_REFINER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/zone_refiner");
     public static OrientedOverlayRenderer ROTARY_EVAPORATOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/rotary_evaporator");
     public static OrientedOverlayRenderer MICROSCOPE_OVERLAY = new OrientedOverlayRenderer(
