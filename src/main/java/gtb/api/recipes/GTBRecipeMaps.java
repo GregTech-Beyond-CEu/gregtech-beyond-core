@@ -206,7 +206,7 @@ public final class GTBRecipeMaps {
             "oxidation_furnace_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ION_EXCHANGE_RECIPES = new RecipeMap<>(
-            "ion_exchange_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+            "ion_exchange_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> UV_LIGHT_RECIPES = new RecipeMap<>(
             "uv_light_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
