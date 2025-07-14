@@ -8,6 +8,9 @@
     "MixinCokeOvenStructure",
     "MixinEBFStructure",
     "MixinPBFStructure",
+    "MixinGroovyHandCommand",
+    "MixinCommonProxy",
+    "MixinRecipeCompatUtil",
     "MixinVacuumFreezerStructure"
   ]
 }
