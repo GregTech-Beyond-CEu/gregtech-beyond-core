@@ -20,6 +20,7 @@ public class GTBMaterials {
     public static Material Tenannite;
     public static Material Xenotime;
     public static Material SilverAlloy;
+    public static Material Zircon;
     public static Material Zirkelite;
 
     // Kev Coolers Materials
