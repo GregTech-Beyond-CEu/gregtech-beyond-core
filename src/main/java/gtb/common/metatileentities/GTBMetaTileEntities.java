@@ -103,13 +103,17 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDryingColumn DRYING_COLUMN;
     public static MetaTileEntityFluidizedBedReactor FLUIDIZED_BED_REACTOR;
     public static MetaTileEntityTubeFurnace TUBE_FURNACE;
-    public static MetaTileEntityHeatExchanger HEAT_EXCHANGER;
     public static MetaTileEntityPrecisionLaser PRECISION_LASER;
     public static MetaTileEntityFlashChromatographySystem FLASH_CHROMATOGRAPHY_SYSTEM;
     public static MetaTileEntityRocketLaunchPad ROCKET_LAUNCH_PAD;
     public static MetaTileEntityRocketAssemblingMachine ROCKET_ASSEMBLING_MACHINE;
     public static MetaTileEntityAlloyKiln ALLOY_KILN;
     public static MetaTileEntityVacuumDesiccator VACUUM_DESICCATOR;
+    public static MetaTileEntityInductionFurnace INDUCTION_FURNACE;
+    public static MetaTileEntityThermalDecompositionChamber THERMAL_DECOMPOSITION_CHAMBER;
+    public static MetaTileEntityElectrochemicalCell ELECTROCHEMICAL_CELL;
+    public static MetaTileEntityElectronBeamMeltingFurnace ELECTRON_BEAM_MELTING_FURNACE;
+    public static MetaTileEntityGateAssembler GATE_ASSEMBLER;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -135,6 +139,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] TRICKLE_BED_REACTOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ZONE_REFINER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ADVANCED_CRUCIBLE = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] KIT_ASSEMBLER = new SimpleMachineMetaTileEntity[15];
 
     public static final int MAX_BASIC_MACHINES = 100;
     public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
@@ -278,8 +283,6 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityFlashChromatographySystem(gtb("flash_chromatography_system")));
         TUBE_FURNACE = registerMetaTileEntity(3079,
                 new MetaTileEntityTubeFurnace(gtb("tube_furnace")));
-        HEAT_EXCHANGER = registerMetaTileEntity(3080,
-                new MetaTileEntityHeatExchanger(gtb("heat_exchanger")));
         PRECISION_LASER = registerMetaTileEntity(3081,
                 new MetaTileEntityPrecisionLaser(gtb("precision_laser")));
         ROCKET_ASSEMBLING_MACHINE = registerMetaTileEntity(3082,
@@ -290,6 +293,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityAlloyKiln(gtb("alloy_kiln")));
         VACUUM_DESICCATOR = registerMetaTileEntity(3085,
                 new MetaTileEntityVacuumDesiccator(gtb("vacuum_desiccator")));
+        INDUCTION_FURNACE = registerMetaTileEntity(3086,
+                new MetaTileEntityInductionFurnace(gtb("induction_furnace")));
+        THERMAL_DECOMPOSITION_CHAMBER = registerMetaTileEntity(3087,
+                new MetaTileEntityThermalDecompositionChamber(gtb("thermal_decomposition_chamber")));
+        ELECTROCHEMICAL_CELL = registerMetaTileEntity(3088,
+                new MetaTileEntityElectrochemicalCell(gtb("electrochemical_cell")));
+        ELECTRON_BEAM_MELTING_FURNACE = registerMetaTileEntity(3089,
+                new MetaTileEntityElectronBeamMeltingFurnace(gtb("electron_beam_melting_furnace")));
+        GATE_ASSEMBLER = registerMetaTileEntity(3091,
+                new MetaTileEntityGateAssembler(gtb("gate_assembler")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -396,6 +409,12 @@ public final class GTBMetaTileEntities {
                 ADVANCED_CRUCIBLE, 4440, "advanced_crucible",
                 GTBRecipeMaps.ADVANCED_CRUCIBLE_RECIPES,
                 Textures.CANNER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                KIT_ASSEMBLER, 4460, "kit_assembler",
+                GTBRecipeMaps.KIT_ASSEMBLER,
+                Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         /**

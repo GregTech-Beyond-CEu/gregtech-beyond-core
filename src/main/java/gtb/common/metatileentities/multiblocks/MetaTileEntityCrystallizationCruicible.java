@@ -89,7 +89,7 @@ public class MetaTileEntityCrystallizationCruicible extends RecipeMapMultiblockC
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.STABLE_TITANIUM_CASING;
     }
 
     @SideOnly(Side.CLIENT)
