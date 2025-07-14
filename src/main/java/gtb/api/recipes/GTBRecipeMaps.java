@@ -236,10 +236,6 @@ public final class GTBRecipeMaps {
             "hot_tower",
             1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> HEAT_EXCHANGER_RECIPES = new RecipeMap<>(
-            "heat_exchanger_recipes",
-            1, 1, 1, 1, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> METEORITE_PREDICTION_CALCULATION = new RecipeMap<>(
             "meteorite_prediction_calculation",
             4, 2, 1, 1, new SimpleRecipeBuilder(), false);
@@ -323,7 +319,7 @@ public final class GTBRecipeMaps {
             "trickle_bed_reactor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CONTINOUS_STIRRING_TANK_REACTOR_RECIPES = new RecipeMap<>(
-            "continous_stirring_tank_reactor_recipes", 4, 3, 3, 3, new SimpleRecipeBuilder(), false);
+            "continous_stirring_tank_reactor_recipes", 4, 3, 4, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> FLUIDIZED_BED_REACTOR_RECIPES = new RecipeMap<>(
             "fbr_recipes", 4, 2, 2, 2, new SimpleRecipeBuilder(), false);
@@ -357,4 +353,26 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DESICCATOR_RECIPES = new RecipeMap<>(
             "vacuum_desiccator_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> KIT_ASSEMBLER = new RecipeMap<>(
+            "kit_assembler", 3, 1, 1, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> INDUCTION_FURNACE_RECIPES = new RecipeMap<>(
+            "induction_furnace", 4, 1, 3, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> THERMAL_DECOMPOSITION_RECIPES = new RecipeMap<>(
+            "thermal_decomposition", 2, 2, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROCHEMICAL_CELL_RECIPES = new RecipeMap<>(
+            "electrochemical_recipes", 3, 2, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_MELTING_FURNACE_RECIPES = new RecipeMap<>(
+            "electron_beam_melting_furnace_recipes", 4, 2, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> GATE_ASSEMBLER_RECIPES = new RecipeMap<>(
+            "gate_assembler_recipes", 6, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+
+
+
 }
