@@ -62,21 +62,29 @@ public class GTBMaterialPropertyAddition {
         // Erbium
 
         Erbium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
         // Gadolinium
 
         Gadolinium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
         // Rhenium
 
         Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
+        // Strontium
+
+        Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Germanium
 
         Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Rutherfordium
+
         Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Rubidium
+
         Rubidium.setProperty(PropertyKey.INGOT, new IngotProperty());
     }
 }
