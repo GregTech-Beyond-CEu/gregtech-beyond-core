@@ -78,6 +78,14 @@ public class GTBFantasyMaterials {
                 .color(0xF98B69)
                 .build().setFormula("REE", true);
 
+        Zircon = new Material.Builder(getMaterialsId(), gregtechId("zircon"))
+                .gem()
+                .dust()
+                .ore()
+                .flags(GENERATE_FLOATED, GENERATE_SIFTED, GENERATE_CONCENTRATE)
+                .color(0x9D5453)
+                .build().setFormula("ZrSiO4", true);
+
         SilverAlloy = new Material.Builder(getMaterialsId(), gregtechId("silver_alloy"))
                 .fluid()
                 .dust()
