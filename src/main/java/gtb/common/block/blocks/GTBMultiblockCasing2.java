@@ -42,7 +42,8 @@ public class GTBMultiblockCasing2 extends VariantBlock<GTBMultiblockCasing2.Casi
         BERYLLIUM_DETECTOR_CASING("beryllium_detector"),
         NEODYMIUM_MAGNET_CASING("neodymium_magnet"),
         PARTICLE_PROTECTION_CASING("particle_protection_casing"),
-        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing");
+        LINEAR_ACCELERATOR_CASING("linear_accelerator_casing"),
+        EMPTY_COOLER("empty_cooler");
 
         private final String name;
 
