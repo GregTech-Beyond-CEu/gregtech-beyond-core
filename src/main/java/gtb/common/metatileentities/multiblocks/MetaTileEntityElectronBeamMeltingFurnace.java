@@ -31,11 +31,11 @@ public class MetaTileEntityElectronBeamMeltingFurnace extends RecipeMapMultibloc
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CGGGGGC~~~~~~~~~~", "CGGGGGC~~UU~~~~UU", "CGGGGGC~~UUPPPPUU", "CGGGGGC~~UU~~~~UU", "CCCSCCC~~~~~~~~~~")
-                .aisle("CGGGGGC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CCCCCCC~~UU~~~~UU")
-                .aisle("CGGGGGC~~UUPPPPUU", "CHHHHHC~ZUU~~~~UU", "C~~~~~CPPUU~~~~UU", "C~~~~~C~ZUU~~~~UU", "CCCCCCC~~UUPPPPUU")
-                .aisle("CGGGGGC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CCCCCCC~~UU~~~~UU")
-                .aisle("CGGGGGC~~~~~~~~~~", "CGGGGGC~~UU~~~~UU", "CGGGGGC~~UUPPPPUU", "CGGGGGC~~UU~~~~UU", "CCCCCCC~~~~~~~~~~")
+                .aisle("CCCCCCC~~~~~~~~~~", "CCCCCCC~~UU~~~~UU", "CCCCCCC~~UUPPPPUU", "CCCCCCC~~UU~~~~UU", "CCCSCCC~~~~~~~~~~")
+                .aisle("CGGGGGC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CGGGGGC~~UU~~~~UU")
+                .aisle("CGGGGGC~~UUPPPPUU", "CHHHHHC~ZUU~~~~UU", "C~~~~~CPPUU~~~~UU", "C~~~~~C~ZUU~~~~UU", "CGGGGGC~~UUPPPPUU")
+                .aisle("CGGGGGC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CHHHHHC~~UU~~~~UU", "CGGGGGC~~UU~~~~UU")
+                .aisle("CGGGGGC~~~~~~~~~~", "CGGGGGC~~UU~~~~UU", "CGGGGGC~~UUPPPPUU", "CGGGGGC~~UU~~~~UU", "CGGGGGC~~~~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState()).setMinGlobalLimited(4)
