@@ -38,16 +38,11 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC",
-                        "CCCCC", "CCCCC", "CCCCC")
-                .aisle("CCCCC", " AAA ", " AAA ", " AAA ", " P P ", " P P ", " P P ", " P P ", "CP PC", " AAA ",
-                        " AAA ", " AAA ", "CCSCC")
-                .aisle("CCCCC", " AAA ", " A A ", " AAA ", "     ", "     ", "     ", "     ", "C   C", " AAA ",
-                        " F F ", " AAA ", "CCCCC")
-                .aisle("CCCCC", " TTT ", " TTT ", " TTT ", "  R  ", "  R  ", "  R  ", "  R  ", "C R C", " AAA ",
-                        " AAA ", " AAA ", "CCCCC")
-                .aisle("CCCCC", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "CCCCC", "CCCCC",
-                        "CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", " AAA ", " AAA ", " AAA ", " P P ", " P P ", " P P ", " P P ", "CP PC", " AAA ", " AAA ", " AAA ", "CCSCC")
+                .aisle("CCCCC", " AAA ", " A A ", " AAA ", "     ", "     ", "     ", "     ", "C   C", " AAA ", " F F ", " AAA ", "CCCCC")
+                .aisle("CCCCC", " TTT ", " TTT ", " TTT ", "  R  ", "  R  ", "  R  ", "  R  ", "C R C", " AAA ", " AAA ", " AAA ", "CCCCC")
+                .aisle("CCCCC", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
