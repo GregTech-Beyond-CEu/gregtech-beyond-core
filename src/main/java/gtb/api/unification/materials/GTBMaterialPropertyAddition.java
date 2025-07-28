@@ -27,6 +27,9 @@ public class GTBMaterialPropertyAddition {
         SodiumSulfide.setProperty(PropertyKey.FLUID,
                 new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
+        Salt.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
         Selenium.setProperty(PropertyKey.DUST, new DustProperty());
         Iron3Chloride.setProperty(PropertyKey.DUST, new DustProperty());
         Tellurium.setProperty(PropertyKey.DUST, new DustProperty());
