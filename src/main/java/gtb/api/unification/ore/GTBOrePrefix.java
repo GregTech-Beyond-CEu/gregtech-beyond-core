@@ -8,6 +8,7 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 
 import gtb.api.unification.materials.info.GTBMaterialIconType;
+import supercritical.api.unification.material.info.SCMaterialIconType;
 
 public class GTBOrePrefix {
 
@@ -32,6 +33,7 @@ public class GTBOrePrefix {
             mat -> !mat.hasFlag(DISABLE_BOULE) && (mat.hasProperty(PropertyKey.GEM) || mat.hasFlag(GENERATE_BOULE)));
     public static final OrePrefix sponge = new OrePrefix("sponge", M, null, GTBMaterialIconType.sponge,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_SPONGE));
+
 
     public static void register() {
         MetaItems.addOrePrefix(GTBOrePrefix.floated);
