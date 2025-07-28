@@ -114,6 +114,17 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityElectrochemicalCell ELECTROCHEMICAL_CELL;
     public static MetaTileEntityElectronBeamMeltingFurnace ELECTRON_BEAM_MELTING_FURNACE;
     public static MetaTileEntityGateAssembler GATE_ASSEMBLER;
+    public static MetaTileEntityCNCMachine CNC_MACHINE;
+    public static MetaTileEntityMixerSettlerReactor MIXER_SETTLER_REACTOR;
+    public static MetaTileEntityRotaryKiln ROTARY_KILN;
+    public static MetaTileEntityFixedBedTubularReactor FIXED_BED_TUBULAR_REACTOR;
+    public static MetaTileEntityCombustionFurnace COMBUSTION_FURNACE;
+    public static MetaTileEntityReactionFurnace REACTION_FURNACE;
+    public static MetaTileEntityHollowFiberContactor HOLLOW_FIBER_CONTACTOR;
+    public static MetaTileEntityElutionColumn ELUTION_COLUMN;
+    public static MetaTileEntityBallMill BALL_MILL;
+    public static MetaTileEntityCatalyticCombustor CATALYTIC_COMBUSTOR;
+    public static MetaTileEntityRegenerationUnit REGENERATION_UNIT;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -140,6 +151,10 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ZONE_REFINER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ADVANCED_CRUCIBLE = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] KIT_ASSEMBLER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] STIRRED_TANK_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] PLUG_FLOW_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] BUBBLE_COLUMN_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] FIXED_BED_REACTOR = new SimpleMachineMetaTileEntity[15];
 
     public static final int MAX_BASIC_MACHINES = 100;
     public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
@@ -301,8 +316,30 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityElectrochemicalCell(gtb("electrochemical_cell")));
         ELECTRON_BEAM_MELTING_FURNACE = registerMetaTileEntity(3089,
                 new MetaTileEntityElectronBeamMeltingFurnace(gtb("electron_beam_melting_furnace")));
+        CNC_MACHINE = registerMetaTileEntity(3090,
+                new MetaTileEntityCNCMachine(gtb("cnc_machine")));
         GATE_ASSEMBLER = registerMetaTileEntity(3091,
                 new MetaTileEntityGateAssembler(gtb("gate_assembler")));
+        MIXER_SETTLER_REACTOR = registerMetaTileEntity(3092,
+                new MetaTileEntityMixerSettlerReactor(gtb("mixer_settler_reactor")));
+        ROTARY_KILN = registerMetaTileEntity(3093,
+                new MetaTileEntityRotaryKiln(gtb("rotary_kiln")));
+        FIXED_BED_TUBULAR_REACTOR = registerMetaTileEntity(3094,
+                new MetaTileEntityFixedBedTubularReactor(gtb("fixed_bed_tubular_reactor")));
+        COMBUSTION_FURNACE = registerMetaTileEntity(3095,
+                new MetaTileEntityCombustionFurnace(gtb("combustion_furnace")));
+        REACTION_FURNACE = registerMetaTileEntity(3096,
+                new MetaTileEntityReactionFurnace(gtb("reaction_furnace")));
+        HOLLOW_FIBER_CONTACTOR = registerMetaTileEntity(3097,
+                new MetaTileEntityHollowFiberContactor(gtb("hollow_fiber_contactor")));
+        ELUTION_COLUMN = registerMetaTileEntity(3098,
+                new MetaTileEntityElutionColumn(gtb("elution_column")));
+        BALL_MILL = registerMetaTileEntity(3099,
+                new MetaTileEntityBallMill(gtb("ball_mill")));
+        CATALYTIC_COMBUSTOR = registerMetaTileEntity(3100,
+                new MetaTileEntityCatalyticCombustor(gtb("catalytic_combustor")));
+        REGENERATION_UNIT = registerMetaTileEntity(3101,
+                new MetaTileEntityRegenerationUnit(gtb("regeneration_unit")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -414,6 +451,30 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 KIT_ASSEMBLER, 4460, "kit_assembler",
                 GTBRecipeMaps.KIT_ASSEMBLER,
+                Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                STIRRED_TANK_REACTOR, 4480, "stirred_tank_reactor",
+                GTBRecipeMaps.STIRRED_TANK_REACTOR_RECIPES,
+                Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                PLUG_FLOW_REACTOR, 4500, "plug_flow_reactor",
+                GTBRecipeMaps.PLUG_FLOW_REACTOR_RECIPES,
+                Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                BUBBLE_COLUMN_REACTOR, 4520, "bubble_column_reactor",
+                GTBRecipeMaps.BUBBLE_COLUMN_REACTOR_RECIPES,
+                Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                FIXED_BED_REACTOR, 4540, "fixed_bed_reactor",
+                GTBRecipeMaps.FIXED_BED_REACTOR_RECIPES,
                 Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
