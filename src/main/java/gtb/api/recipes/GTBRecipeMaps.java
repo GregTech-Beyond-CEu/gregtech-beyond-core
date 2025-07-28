@@ -53,7 +53,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> FERMENTATION_VAT_RECIPES = new RecipeMap<>(
             "fermentation_vat_recipes",
-            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+            2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR_RECIPES = new RecipeMap<>(
             "neutron_accelerator_recipes",
@@ -206,7 +206,7 @@ public final class GTBRecipeMaps {
             "oxidation_furnace_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ION_EXCHANGE_RECIPES = new RecipeMap<>(
-            "ion_exchange_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+            "ion_exchange_recipes", 2, 2, 1, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> UV_LIGHT_RECIPES = new RecipeMap<>(
             "uv_light_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
@@ -313,10 +313,10 @@ public final class GTBRecipeMaps {
             "drying_column", 1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BATCH_REACTOR_RECIPES = new RecipeMap<>(
-            "batch_reactor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+            "batch_reactor", 3, 3, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> TRICKLE_BED_REACTOR_RECIPES = new RecipeMap<>(
-            "trickle_bed_reactor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+            "trickle_bed_reactor", 3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CONTINOUS_STIRRING_TANK_REACTOR_RECIPES = new RecipeMap<>(
             "continous_stirring_tank_reactor_recipes", 4, 3, 4, 3, new SimpleRecipeBuilder(), false);
@@ -371,6 +371,52 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> GATE_ASSEMBLER_RECIPES = new RecipeMap<>(
             "gate_assembler_recipes", 6, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CNC_RECIPES = new RecipeMap<>(
+            "cnc_recipes", 2, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> STIRRED_TANK_REACTOR_RECIPES = new RecipeMap<>(
+            "stirred_tank_reactor_recipes", 3, 2, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MIXER_SETTLER_REACTOR_RECIPES = new RecipeMap<>(
+            "mixer_settler_reactor_recipes", 4, 2, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROTARY_KILN_RECIPES = new RecipeMap<>(
+            "rotary_kiln_recipes", 4, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FIXED_BED_TUBULAR_REACTOR_RECIPES = new RecipeMap<>(
+            "fixed_bed_tubular_reactor_recipes", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PLUG_FLOW_REACTOR_RECIPES = new RecipeMap<>(
+            "plug_flow_reactor_recipes", 4, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BUBBLE_COLUMN_REACTOR_RECIPES = new RecipeMap<>(
+            "bubble_column_reactor_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FIXED_BED_REACTOR_RECIPES = new RecipeMap<>(
+            "fixed_bed_reactor", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> COMBUSTION_FURNACE_RECIPES = new RecipeMap<>(
+            "combustion_furnace", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> REACTION_FURNACE_RECIPES = new RecipeMap<>(
+            "reaction_furnace", 3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HOLLOW_FIBER_CONTACTOR_RECIPES = new RecipeMap<>(
+            "hollow_fiber_contactor", 2, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BALL_MILL_RECIPES = new RecipeMap<>(
+            "ball_mill", 2, 3, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELUTION_COLUMN_RECIPES = new RecipeMap<>(
+            "elution_column", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_COMBUSTOR_RECIPES = new RecipeMap<>(
+            "catalytic_combustor", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> REGENERATION_UNIT_RECIPES = new RecipeMap<>(
+            "regeneration_unit", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
 
 
 
