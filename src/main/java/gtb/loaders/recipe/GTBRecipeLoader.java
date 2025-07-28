@@ -2,13 +2,17 @@ package gtb.loaders.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
+import gtb.loaders.recipe.handlers.FluidRecipeHandler;
+import gtb.loaders.recipe.handlers.NuclearRecipeHandler;
+import supercritical.common.SCConfigHolder;
+import supercritical.loaders.recipe.SCRecipeModifications;
 
 public final class GTBRecipeLoader {
 
     public static void init() {
         RecipeMaps.BLAST_RECIPES.setMaxInputs(4);
         RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
-        RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(3);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
         RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
@@ -30,7 +34,16 @@ public final class GTBRecipeLoader {
         RecipeMaps.ELECTROLYZER_RECIPES.setMaxInputs(3);
         RecipeMaps.BLAST_RECIPES.setMaxFluidOutputs(2);
 
+
         MachineRecipes.init();
+        SupercriticalRecipes.init();
+        NuclearRecipeHandler.register();
         KevTestRecipes.register();
+    }
+    public static void loadLatest() {
+        SCRecipeModifications.load();
+        if (SCConfigHolder.misc.enableHX) {
+            FluidRecipeHandler.runRecipeGeneration();
+        }
     }
 }
