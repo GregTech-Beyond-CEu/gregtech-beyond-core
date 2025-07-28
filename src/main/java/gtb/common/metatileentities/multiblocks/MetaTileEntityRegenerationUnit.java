@@ -31,7 +31,7 @@ public class MetaTileEntityRegenerationUnit extends RecipeMapMultiblockControlle
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("C~~CCC~", "~~CCCCC", "C~CCCCC", "~~CCCCC", "C~~CCC~")
+                .aisle("C~~CCC~", "~~CCCCC", "C~CCCCC", "~~CCCCC", "C~~CSC~")
                 .aisle("E~~CCC~", "~~C~~~C", "E~C~~~C", "~~C~~~C", "E~~CCC~")
                 .aisle("P~~CCC~", "~~C~~~C", "P~C~~~C", "~~C~~~C", "P~~CCC~")
                 .aisle("P~~CCC~", "~~C~~~C", "P~C~~~C", "~~C~~~C", "P~~CCC~")
