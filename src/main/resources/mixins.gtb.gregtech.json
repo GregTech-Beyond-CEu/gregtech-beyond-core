@@ -6,11 +6,12 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinCokeOvenStructure",
-    "MixinEBFStructure",
-    "MixinPBFStructure",
-    "MixinGroovyHandCommand",
     "MixinCommonProxy",
+    "MixinEBFStructure",
+    "MixinGroovyHandCommand",
+    "MixinPBFStructure",
     "MixinRecipeCompatUtil",
+    "MixinSCMiscRecipes",
     "MixinVacuumFreezerStructure"
   ]
 }
