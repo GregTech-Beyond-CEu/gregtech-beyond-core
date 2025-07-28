@@ -22,6 +22,8 @@ import gregtech.common.blocks.MetaBlocks;
 
 import gtb.api.recipes.GTBRecipeMaps;
 
+import static gregtech.api.unification.material.Materials.Steel;
+
 public class MetaTileEntityAdsorptionTower extends RecipeMapMultiblockController {
 
     public MetaTileEntityAdsorptionTower(ResourceLocation metaTileEntityId) {
@@ -44,16 +46,17 @@ public class MetaTileEntityAdsorptionTower extends RecipeMapMultiblockController
                 .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~~~C", "C~~~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "CC~CC", "CC~CC", "CC~CC", "~CCC~")
-                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
-                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
-                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
-                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
-                .aisle("~~~~~", "~~C~~", "~C~C~", "~~C~~", "~~~~~")
-                .aisle("~~~~~", "~~C~~", "~CCC~", "~~C~~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~C~C~", "~FCF~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~C~C~", "~FCF~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~C~C~", "~FCF~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~C~C~", "~FCF~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~C~C~", "~FCF~", "~~~~~")
+                .aisle("~~~~~", "~FCF~", "~CCC~", "~FCF~", "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState()).setMinGlobalLimited(90)
                         .or(autoAbilities()))
+                .where('F', frames(Steel))
                 .build();
     }
 
