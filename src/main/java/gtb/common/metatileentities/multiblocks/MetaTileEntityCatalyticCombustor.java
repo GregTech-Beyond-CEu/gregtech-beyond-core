@@ -68,16 +68,18 @@ public class MetaTileEntityCatalyticCombustor extends RecipeMapMultiblockControl
                         "~~~~~~~~~",
                         "~~~~~~~~~")
 
-                .aisle( "~~~~~~CCC",
-                        "~~P~~~C~C",
-                        "~~~~~~CCC",
+                .aisle( "~~~~~~ZZZ",
+                        "~~P~~~Z~Z",
+                        "~~~~~~ZZZ",
+                        "~~~~~~~~~",
                         "~~~~~~~~~",
                         "~~~~~~~~~",
                         "~~~~~~~~~")
 
-                .aisle( "~~~~~~~C~",
-                        "~~F~~~CCC",
-                        "~~~~~~~C~",
+                .aisle( "~~~~~~~Z~",
+                        "~~F~~~ZZZ",
+                        "~~~~~~~Z~",
+                        "~~~~~~~~~",
                         "~~~~~~~~~",
                         "~~~~~~~~~",
                         "~~~~~~~~~")
