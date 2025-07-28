@@ -34,6 +34,7 @@ dependencies {
     implementation rfg.deobf("curse.maven:galacticraft-legacy-564236:6364107")
     implementation rfg.deobf("curse.maven:asmodeuscore-303101:6058953")
     implementation rfg.deobf("curse.maven:ae2-extended-life-570458:6302098")
+    implementation rfg.deobf("curse.maven:supercritical-1185871:6774159")
 
 
     implementation rfg.deobf("curse.maven:pyrotech-306676:6253355")
