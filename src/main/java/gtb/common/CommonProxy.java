@@ -17,7 +17,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import org.jetbrains.annotations.NotNull;
-
+import supercritical.api.util.SCLog;
+import supercritical.loaders.recipe.SCRecipeManager;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
@@ -98,4 +99,12 @@ public class CommonProxy {
         GTBOrePrefix.register();
         GTBMaterialRecipeHandler.register();
     }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void registerRecipesLowest(RegistryEvent.Register<IRecipe> event) {
+        SCLog.logger.info("Running late material handlers...");
+
+        SCRecipeManager.loadLatest();
+    }
+
 }
