@@ -43,7 +43,7 @@ public class MetaTileEntityMixerSettlerReactor extends RecipeMapMultiblockContro
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
                 .aisle("F~~F~~~~~F~~~F", "~~~~~~~~~~~~~~", "F~~F~~~~~F~~~F")
                 .aisle("F~~F~~~~~F~~~F", "MMMMPCCCPCGGGC", "F~~F~~~~~F~~~F")
-                .aisle("MMMMPCSCPCGGGC", "M~~M~~~~~C~~~C", "MMMMPCCCPCGGGC")
+                .aisle("MMMMPCCCPCGGGC", "M~~M~~~~~C~~~C", "MMMMPCSCPCGGGC")
                 .aisle("~~~~~~~~~~~~~~", "MMMMPCCCPCGGGC", "~~~~~~~~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
