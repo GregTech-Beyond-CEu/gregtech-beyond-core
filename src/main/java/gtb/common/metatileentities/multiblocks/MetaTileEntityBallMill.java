@@ -36,7 +36,7 @@ public class MetaTileEntityBallMill extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~~~~~~~", "C~~~~~~~~~C", "C~~~~~~~~~C", "C~~~~~~~~~S", "~~~~~~~~~~~")
+                .aisle("~~~~~~~~~~~", "C~~~~~~~~~C", "S~~~~~~~~~C", "C~~~~~~~~~C", "~~~~~~~~~~~")
                 .aisle("~~~~~~~~~~~", "~~~~~~~~~~~", "C~~~~~~~~~C", "~~~~~~~~~~~", "~~~~~~~~~~~")
                 .aisle("~~~~~~~~~~~", "~~~~~~~~~~~", "F~PPPPPPP~F", "~~~~~~~~~~~", "~~~~~~~~~~~")
                 .aisle("~~~~~~~~~~~", "~~PPPPPPP~~", "F~P~~~~~P~F", "~~PPPPPPP~~", "~~~~~~~~~~~")
