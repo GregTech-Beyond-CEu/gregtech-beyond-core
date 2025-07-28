@@ -1,5 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregtech.common.blocks.BlockBoilerCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -22,6 +23,8 @@ import gregtech.common.blocks.MetaBlocks;
 
 import gtb.api.recipes.GTBRecipeMaps;
 
+import static gregtech.api.unification.material.Materials.StainlessSteel;
+
 public class MetaTileEntityBlender extends RecipeMapMultiblockController {
 
     public MetaTileEntityBlender(ResourceLocation metaTileEntityId) {
@@ -29,7 +32,7 @@ public class MetaTileEntityBlender extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.PTFE_INERT_CASING);
     }
 
     @Override
@@ -39,11 +42,13 @@ public class MetaTileEntityBlender extends RecipeMapMultiblockController {
                 .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~Z~C", "CZZZC", "C~Z~C", "~CCC~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState()).setMinGlobalLimited(90)
                         .or(autoAbilities()))
-                .where('O', states())
+                .where('O', frames(StainlessSteel))
+                .where('Z', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE)))
                 .build();
     }
 
