@@ -3,7 +3,7 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.blocks.MetaBlocks.MACHINE_CASING;
+import static gregtech.common.blocks.MetaBlocks.*;
 import static gregtech.common.items.MetaItems.*;
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.*;
@@ -435,5 +435,52 @@ public class MachineRecipes {
                 'Z', CONVEYOR,
                 'M', HULL,
                 'L', CABLE);
+
+        registerMachineRecipe(GTBMetaTileEntities.PLUG_FLOW_REACTOR,
+                "UTP",
+                "CMC",
+                "FOF",
+                'C', CIRCUIT,
+                'P', PUMP,
+                'F', CABLE,
+                'M', HULL,
+                'T', PIPE_LARGE,
+                'U', MOTOR,
+                'O', SENSOR);
+
+        registerMachineRecipe(GTBMetaTileEntities.STIRRED_TANK_REACTOR,
+                "CFP",
+                "CMC",
+                "UOF",
+                'C', CIRCUIT,
+                'P', PUMP,
+                'F', CABLE,
+                'M', HULL,
+                'O', FIELD_GENERATOR,
+                'U', SENSOR);
+
+        registerMachineRecipe(GTBMetaTileEntities.BUBBLE_COLUMN_REACTOR,
+                "VGP",
+                "CMC",
+                "LHF",
+                'V', SENSOR,
+                'G', PIPE_LARGE,
+                'C', CIRCUIT,
+                'P', PUMP,
+                'M', HULL,
+                'L', FIELD_GENERATOR,
+                'H', MOTOR,
+                'F', CABLE);
+
+        registerMachineRecipe(GTBMetaTileEntities.FIXED_BED_REACTOR,
+                "GPG",
+                "CMC",
+                "FHF",
+                'G', PIPE_LARGE,
+                'C', CIRCUIT,
+                'P', PUMP,
+                'M', HULL,
+                'H', MOTOR,
+                'F', CABLE);
     }
 }
