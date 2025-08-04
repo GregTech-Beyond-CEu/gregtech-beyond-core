@@ -125,6 +125,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityBallMill BALL_MILL;
     public static MetaTileEntityCatalyticCombustor CATALYTIC_COMBUSTOR;
     public static MetaTileEntityRegenerationUnit REGENERATION_UNIT;
+    public static MetaTileEntityCatalyticConverter CATALYTIC_CONVERTER;
+    public static MetaTileEntityFinalPolycondensationReactor FINAL_POLYCONDENSATION_REACTOR;
+    public static MetaTileEntityVacuumArcRemeltingFurnace VACUUM_ARC_REMELTING_FURNACE;
+    public static MetaTileEntityContinousCastingMachine CONTINOUS_CASTING_MACHINE;
+    public static MetaTileEntityBridgmanFurnace BRIDGMAN_FURNACE;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -340,6 +345,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityCatalyticCombustor(gtb("catalytic_combustor")));
         REGENERATION_UNIT = registerMetaTileEntity(3101,
                 new MetaTileEntityRegenerationUnit(gtb("regeneration_unit")));
+        CATALYTIC_CONVERTER = registerMetaTileEntity(3102,
+                new MetaTileEntityCatalyticConverter(gtb("catalytic_converter")));
+        FINAL_POLYCONDENSATION_REACTOR = registerMetaTileEntity(3103,
+                new MetaTileEntityFinalPolycondensationReactor(gtb("final_polycondensation_reactor")));
+        VACUUM_ARC_REMELTING_FURNACE = registerMetaTileEntity(3104,
+                new MetaTileEntityVacuumArcRemeltingFurnace(gtb("vacuum_arc_remelting_furnace")));
+        CONTINOUS_CASTING_MACHINE = registerMetaTileEntity(3105,
+                new MetaTileEntityContinousCastingMachine(gtb("continous_casting_machine")));
+        BRIDGMAN_FURNACE = registerMetaTileEntity(3106,
+                new MetaTileEntityBridgmanFurnace(gtb("bridgman_furnace")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
