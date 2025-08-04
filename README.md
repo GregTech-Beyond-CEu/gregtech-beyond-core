@@ -21,6 +21,27 @@ Run `./gradlew :spotlessApply build`.
 - Edit the line containing `curse.maven:gregtech-ce-unofficial` in [dependencies.gradle](dependencies.gradle).
 - Reload all gradle projects 
 
+### For Developers:
+
+change the Run Config of Supercrtical
+run\config\supercritical.cfg
+
+        # Remove all materials from Supercritical, except Corium.
+        # Default: false
+        B:disableAllMaterials=true
+
+        # Remove all recipes from Supercritical.
+        # Default: false
+        B:disableAllRecipes=true
+
+        # Whether to register heat exchanger or not. Useful for SuSy.
+        # Default: true
+        B:enableHX=true
+
+        # Do material modifications, like adding flags or properties.
+        # Modpack devs might want to disable this to reduce conflicts.
+        # Default: true
+        B:enableMaterialModifications=false
 
 Credits:
 
