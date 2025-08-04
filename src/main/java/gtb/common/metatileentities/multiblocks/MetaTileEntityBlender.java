@@ -1,6 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
 import gregtech.common.blocks.BlockBoilerCasing;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing2;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -39,7 +41,7 @@ public class MetaTileEntityBlender extends RecipeMapMultiblockController {
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
                 .aisle("~CCC~", "CCCCC", "CCCCC", "CCCCC", "~CSC~")
-                .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
+                .aisle("~CCC~", "C~~~C", "C~J~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~~~C", "C~O~C", "C~~~C", "~CCC~")
                 .aisle("~CCC~", "C~Z~C", "CZZZC", "C~Z~C", "~CCC~")
@@ -48,6 +50,7 @@ public class MetaTileEntityBlender extends RecipeMapMultiblockController {
                 .where('C', states(getCasingState()).setMinGlobalLimited(90)
                         .or(autoAbilities()))
                 .where('O', frames(StainlessSteel))
+                .where('J', states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING2.getState(GTBMultiblockCasing2.CasingType.BLADE_ASSEMBLY_CASING)))
                 .where('Z', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE)))
                 .build();
     }
@@ -60,7 +63,7 @@ public class MetaTileEntityBlender extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.INERT_PTFE_CASING;
     }
 
     @SideOnly(Side.CLIENT)
