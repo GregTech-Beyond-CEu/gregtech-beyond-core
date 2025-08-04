@@ -44,7 +44,10 @@ public class GTBMultiblockCasing2 extends VariantBlock<GTBMultiblockCasing2.Casi
         PARTICLE_PROTECTION_CASING("particle_protection_casing"),
         LINEAR_ACCELERATOR_CASING("linear_accelerator_casing"),
         EMPTY_COOLER("empty_cooler"),
-        LASER_ARRAY_CASING("laser_array_casing");
+        LASER_ARRAY_CASING("laser_array_casing"),
+        WATER_COOLED_COPPER_MOLD("water_cooled_copper_mold"),
+        ARC_FURNACE_ELECTRODE_BLOCK("arc_furnace_electrode_block"),
+        ROLLER("roller");
 
         private final String name;
 
