@@ -14,12 +14,6 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing2/hss_g_casing"
             }
           },
-      "blade_assembly_block" : {
-        "model" : "minecraft:cube_all",
-        "textures" : {
-          "all" : "gregtech:blocks/gtb_multiblock_casing2/blade_assembly_block"
-            }
-          },
       "thermal_evaporation_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
@@ -30,6 +24,30 @@
         "model" : "minecraft:cube_all",
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing2/fused_quartz_block"
+        }
+      },
+      "water_cooled_copper_mold" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/water_cooled_copper_mold"
+        }
+      },
+      "arc_furnace_electrode_block" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/arc_furnace_electrode_block"
+        }
+      },
+      "roller" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/roller"
+        }
+      },
+      "blade_assembly_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/blade_assembly_casing"
         }
       },
       "rocket_block_base" : {
