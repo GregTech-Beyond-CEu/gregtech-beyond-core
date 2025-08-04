@@ -2,11 +2,11 @@
 
 where to find the project and follow its development?
 curseforge:
-https://www.curseforge.com/minecraft/modpacks/gregtech-beyond
+https://www.curseforge.com/minecraft/modpacks/gregtech-beyond-ceu
 discord:
 https://discord.gg/sG6NZ7NaeC
 other Projects
-https://github.com/Gregtech-Beyond
+https://github.com/GregTech-Beyond-CEu
 
 ### INSTALLATION:
 
