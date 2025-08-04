@@ -21,7 +21,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_FURNACE_RECIPES = new RecipeMap<>(
             "vacuum_furnace_recipes",
-            2, 1, 2, 0, new SimpleRecipeBuilder(), false);
+            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT_RECIPES = new RecipeMap<>("bacterial_vat_recipes",
             4, 2, 6, 4, new SimpleRecipeBuilder(), false);
@@ -151,7 +151,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR_RECIPES = new RecipeMap<>(
             "phase_separator_recipes",
-            0, 0, 1, 3, new SimpleRecipeBuilder(), false);
+            1, 1, 1, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK_RECIPES = new RecipeMap<>(
             "dissolution_tank_recipes",
@@ -203,7 +203,7 @@ public final class GTBRecipeMaps {
             "vacuum_metalizer_recipes", 4, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> OXIDATION_FURNACE_RECIPES = new RecipeMap<>(
-            "oxidation_furnace_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+            "oxidation_furnace_recipes", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ION_EXCHANGE_RECIPES = new RecipeMap<>(
             "ion_exchange_recipes", 2, 2, 1, 2, new SimpleRecipeBuilder(), false);
@@ -346,7 +346,7 @@ public final class GTBRecipeMaps {
             "crucible_recipes", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ZONE_REFINER_RECIPES = new RecipeMap<>(
-            "zone_refiner_recipes", 2, 2, 2, 0, new SimpleRecipeBuilder(), false);
+            "zone_refiner_recipes", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ADVANCED_CRUCIBLE_RECIPES = new RecipeMap<>(
             "advanced_crucible", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
@@ -391,13 +391,13 @@ public final class GTBRecipeMaps {
             "plug_flow_reactor_recipes", 4, 3, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BUBBLE_COLUMN_REACTOR_RECIPES = new RecipeMap<>(
-            "bubble_column_reactor_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+            "bubble_column_reactor_recipes", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> FIXED_BED_REACTOR_RECIPES = new RecipeMap<>(
-            "fixed_bed_reactor", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+            "fixed_bed_reactor", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> COMBUSTION_FURNACE_RECIPES = new RecipeMap<>(
-            "combustion_furnace", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+            "combustion_furnace", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> REACTION_FURNACE_RECIPES = new RecipeMap<>(
             "reaction_furnace", 3, 3, 3, 3, new SimpleRecipeBuilder(), false);
@@ -416,6 +416,22 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> REGENERATION_UNIT_RECIPES = new RecipeMap<>(
             "regeneration_unit", 3, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_CONVERTER_RECIPES = new RecipeMap<>(
+            "catalytic_converter", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FINAL_POLYCONDENSATION_REACTOR_RECIPES = new RecipeMap<>(
+            "final_polycondensation_reactor", 2, 2, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VAR_FURNACE_RECIPES = new RecipeMap<>(
+            "var_furnace_recipes", 4, 2, 3, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CONTINOUS_CASTING_RECIPES = new RecipeMap<>(
+            "continous_casting_recipes", 1, 1, 1, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BRIDGMAN_FURNACE_RECIPES = new RecipeMap<>(
+            "bridgman_furnace", 4, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
 
 
 
