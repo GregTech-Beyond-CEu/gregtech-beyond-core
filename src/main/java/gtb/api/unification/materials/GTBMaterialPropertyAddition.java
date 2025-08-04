@@ -42,6 +42,11 @@ public class GTBMaterialPropertyAddition {
         BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
         PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
 
+
+
+        Thulium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Terbium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
         // Graphene
 
         Graphene.setProperty(PropertyKey.INGOT, new IngotProperty());
