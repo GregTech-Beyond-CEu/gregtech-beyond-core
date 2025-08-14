@@ -12,4 +12,5 @@ public class GTBMaterialIconType {
     public static MaterialIconType concentrate = new MaterialIconType("concentrate");
     public static MaterialIconType beads = new MaterialIconType("beads");
     public static MaterialIconType sponge = new MaterialIconType("sponge");
+    public static MaterialIconType pellets = new MaterialIconType("pellets");
 }
