@@ -1,0 +1,85 @@
+{
+  "forge_marker" : 1,
+  "defaults" : {
+    "model" : "minecraft:cube_all",
+    "textures" : {
+      "all" : "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants" : {
+    "variant" : {
+      "electric_arc_furnace_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/electric_arc_furnace_casing"
+        }
+      },
+      "vacuum_arc_remelting_furnace_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/vacuum_arc_remelting_furnace_casing"
+        }
+      },
+      "molybdenum_electrode_block" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/molybdenum_electrode_block"
+        }
+      },
+      "magnesia_based_refractory_bricks" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/magnesia_based_refractory_bricks"
+        }
+      },
+      "industrial_exhaust_vent" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/industrial_exhaust_vent"
+        }
+      },
+      "incoloy_600_lined_steel_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/incoloy_600_lined_steel_casing"
+        }
+      },
+      "incoloy_600_lined_steel_pipe_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/incoloy_600_lined_steel_pipe_casing"
+        }
+      },
+      "alumina_lined_steel_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/alumina_lined_steel_casing"
+        }
+      },
+      "frp_lined_steel_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/frp_lined_steel_casing"
+        }
+      },
+      "coagulator_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/coagulator_casing"
+        }
+      },
+      "bridgman_furnace_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/bridgman_furnace_casing"
+        }
+      },
+      "cold_box" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/cold_box"
+        }
+      }
+    }
+  }
+}
