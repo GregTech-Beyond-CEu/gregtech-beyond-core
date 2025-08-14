@@ -130,6 +130,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityVacuumArcRemeltingFurnace VACUUM_ARC_REMELTING_FURNACE;
     public static MetaTileEntityContinousCastingMachine CONTINOUS_CASTING_MACHINE;
     public static MetaTileEntityBridgmanFurnace BRIDGMAN_FURNACE;
+    public static MetaTileEntityElectricArcFurnace ELECTRIC_ARC_FURNACE;
+    public static MetaTileEntityIngotCastingMachine INGOT_CASTING_MACHINE;
+    public static MetaTileEntityInjectionMoldingMachine INJECTION_MOLDING_MACHINE;
+    public static MetaTileEntityCoagulator COAGULATOR;
+    public static MetaTileEntityElectricGlassMeltingFurnace ELECTRIC_GLASS_MELTING_FURNACE;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -160,6 +165,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] PLUG_FLOW_REACTOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BUBBLE_COLUMN_REACTOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] FIXED_BED_REACTOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] PELLETIZER = new SimpleMachineMetaTileEntity[15];
 
     public static final int MAX_BASIC_MACHINES = 100;
     public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
@@ -355,6 +361,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityContinousCastingMachine(gtb("continous_casting_machine")));
         BRIDGMAN_FURNACE = registerMetaTileEntity(3106,
                 new MetaTileEntityBridgmanFurnace(gtb("bridgman_furnace")));
+        ELECTRIC_ARC_FURNACE = registerMetaTileEntity(3107,
+                new MetaTileEntityElectricArcFurnace(gtb("electric_arc_furnace")));
+        INGOT_CASTING_MACHINE = registerMetaTileEntity(3108,
+                new MetaTileEntityIngotCastingMachine(gtb("ingot_casting_machine")));
+        INJECTION_MOLDING_MACHINE = registerMetaTileEntity(3109,
+                new MetaTileEntityInjectionMoldingMachine(gtb("injection_molding_machine")));
+        COAGULATOR = registerMetaTileEntity(3110,
+                new MetaTileEntityCoagulator(gtb("coagulator")));
+        ELECTRIC_GLASS_MELTING_FURNACE = registerMetaTileEntity(3111,
+                new MetaTileEntityElectricGlassMeltingFurnace(gtb("electric_glass_melting_furnace")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -490,6 +506,12 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 FIXED_BED_REACTOR, 4540, "fixed_bed_reactor",
                 GTBRecipeMaps.FIXED_BED_REACTOR_RECIPES,
+                Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                PELLETIZER, 4560, "pelletizer",
+                GTBRecipeMaps.PELLETIZER_RECIPES,
                 Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
