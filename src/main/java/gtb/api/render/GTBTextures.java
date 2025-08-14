@@ -95,6 +95,22 @@ public final class GTBTextures {
             "machines/electron_beam");
     public static SimpleOverlayRenderer PORCELAIN_TILES = new SimpleOverlayRenderer(
             "gtb_multiblock_casing2/galvanized_porcelain_tiles");
+    public static SimpleOverlayRenderer ELECTRIC_ARC_FURNACE_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/electric_arc_furnace_casing");
+    public static SimpleOverlayRenderer VACUUM_ARC_REMELTING_FURNACE_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/vacuum_arc_remelting_furnace_casing");
+    public static SimpleOverlayRenderer MAGNESIA_BASED_REFRACTORY_BRICKS_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/magnesia_based_refractory_bricks");
+    public static SimpleOverlayRenderer INCOLOY_600_LINED_STEEL_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/incoloy_600_lined_steel_casing");
+    public static SimpleOverlayRenderer ALUMINA_LINED_STEEL_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/alumina_lined_steel_casing");
+    public static SimpleOverlayRenderer FRP_LINED_STEEL_CASING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/frp_lined_steel_casing");
+    public static SimpleOverlayRenderer COAGULATOR_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/coagulator_casing");
+    public static SimpleOverlayRenderer BRIDGMAN_FURNACE_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/bridgman_furnace_casing");
 
     private GTBTextures() {}
 
