@@ -14,8 +14,10 @@ import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing2;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -32,7 +34,7 @@ public class MetaTileEntityBridgmanFurnace extends RecipeMapMultiblockController
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.BRIDGMAN_FURNACE_CASING);
     }
 
     @Override
@@ -71,7 +73,7 @@ public class MetaTileEntityBridgmanFurnace extends RecipeMapMultiblockController
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.HEAT_PROOF_CASING;
+        return GTBTextures.BRIDGMAN_FURNACE_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
