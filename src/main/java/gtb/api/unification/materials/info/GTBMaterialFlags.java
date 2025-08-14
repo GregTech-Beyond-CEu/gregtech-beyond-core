@@ -49,6 +49,9 @@ public class GTBMaterialFlags {
     public static MaterialFlag GENERATE_SPONGE = (new MaterialFlag.Builder("sponge"))
             .build();
 
+    public static MaterialFlag GENERATE_PELLETS = (new MaterialFlag.Builder("pellets"))
+            .build();
+
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
