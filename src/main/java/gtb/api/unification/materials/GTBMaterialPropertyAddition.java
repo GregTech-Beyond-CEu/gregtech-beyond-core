@@ -1,11 +1,13 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialFlags.FORCE_GENERATE_BLOCK;
+import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.properties.*;
-
+import supercritical.api.unification.material.properties.*;
 public class GTBMaterialPropertyAddition {
 
     public static void init() {
@@ -94,5 +96,34 @@ public class GTBMaterialPropertyAddition {
         // Rubidium
 
         Rubidium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
+        Uraninite.setProperty(SCPropertyKey.FISSION_FUEL,
+                FissionFuelProperty.builder(Uraninite.getRegistryName(), 1800, 60000, 2.4)
+                        .fastNeutronCaptureCrossSection(0.5)
+                        .slowNeutronCaptureCrossSection(1)
+                        .slowNeutronFissionCrossSection(1)
+                        .requiredNeutrons(1)
+                        .releasedNeutrons(2.5)
+                        .releasedHeatEnergy(0.01)
+                        .decayRate(0.001)
+                        .build());
+
+        DistilledWater.setProperty(SCPropertyKey.COOLANT,
+                new CoolantProperty(DistilledWater, HighPressureSteam, FluidStorageKeys.LIQUID, 2., 1000,
+                        373, 2260000, 4168.)
+                        .setAccumulatesHydrogen(true).setSlowAbsorptionFactor(0.1875)
+                        .setFastAbsorptionFactor(0.0625));
+
+        Graphite.addFlags(FORCE_GENERATE_BLOCK);
+
+        Graphite.setProperty(SCPropertyKey.MODERATOR, ModeratorProperty.builder()
+                .maxTemperature(3650)
+                .absorptionFactor(0.0625)
+                .moderationFactor(3).build());
+
+        Beryllium.setProperty(SCPropertyKey.MODERATOR, ModeratorProperty.builder()
+                .maxTemperature(1500)
+                .absorptionFactor(0.015625)
+                .moderationFactor(5).build());
     }
 }
