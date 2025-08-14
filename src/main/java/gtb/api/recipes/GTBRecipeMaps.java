@@ -7,6 +7,7 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import scala.sys.process.ProcessBuilderImpl;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -313,7 +314,7 @@ public final class GTBRecipeMaps {
             "drying_column", 1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BATCH_REACTOR_RECIPES = new RecipeMap<>(
-            "batch_reactor", 3, 3, 3, 2, new SimpleRecipeBuilder(), false);
+            "batch_reactor", 3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> TRICKLE_BED_REACTOR_RECIPES = new RecipeMap<>(
             "trickle_bed_reactor", 3, 3, 3, 3, new SimpleRecipeBuilder(), false);
@@ -358,13 +359,13 @@ public final class GTBRecipeMaps {
             "kit_assembler", 3, 1, 1, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> INDUCTION_FURNACE_RECIPES = new RecipeMap<>(
-            "induction_furnace", 4, 1, 3, 1, new SimpleRecipeBuilder(), false);
+            "induction_furnace", 9, 1, 3, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> THERMAL_DECOMPOSITION_RECIPES = new RecipeMap<>(
             "thermal_decomposition", 2, 2, 1, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTROCHEMICAL_CELL_RECIPES = new RecipeMap<>(
-            "electrochemical_recipes", 3, 2, 4, 2, new SimpleRecipeBuilder(), false);
+            "electrochemical_recipes", 3, 2, 4, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_MELTING_FURNACE_RECIPES = new RecipeMap<>(
             "electron_beam_melting_furnace_recipes", 4, 2, 4, 2, new SimpleRecipeBuilder(), false);
@@ -382,13 +383,13 @@ public final class GTBRecipeMaps {
             "mixer_settler_reactor_recipes", 4, 2, 3, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ROTARY_KILN_RECIPES = new RecipeMap<>(
-            "rotary_kiln_recipes", 4, 1, 2, 2, new SimpleRecipeBuilder(), false);
+            "rotary_kiln_recipes", 4, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> FIXED_BED_TUBULAR_REACTOR_RECIPES = new RecipeMap<>(
             "fixed_bed_tubular_reactor_recipes", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> PLUG_FLOW_REACTOR_RECIPES = new RecipeMap<>(
-            "plug_flow_reactor_recipes", 4, 3, 2, 2, new SimpleRecipeBuilder(), false);
+            "plug_flow_reactor_recipes", 4, 3, 3, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BUBBLE_COLUMN_REACTOR_RECIPES = new RecipeMap<>(
             "bubble_column_reactor_recipes", 3, 2, 3, 2, new SimpleRecipeBuilder(), false);
@@ -426,13 +427,26 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> VAR_FURNACE_RECIPES = new RecipeMap<>(
             "var_furnace_recipes", 4, 2, 3, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CONTINOUS_CASTING_RECIPES = new RecipeMap<>(
-            "continous_casting_recipes", 1, 1, 1, 0, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> BRIDGMAN_FURNACE_RECIPES = new RecipeMap<>(
             "bridgman_furnace", 4, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTRIC_ARC_FURNACE_RECIPES = new RecipeMap<>(
+            "electric_arc_furnace_recipes", 6, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> INGOT_CASTING_RECIPES = new RecipeMap<>(
+            "ingot_casting_recipes", 1, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PELLETIZER_RECIPES = new RecipeMap<>(
+            "pelletizer_recipes", 3, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> INJECTION_MOLDING_RECIPES = new RecipeMap<>(
+            "injection_molding_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> COAGULATOR_RECIPES = new RecipeMap<>(
+            "coagulator", 4, 2, 2, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTRIC_GLASS_MELTING_RECIPES = new RecipeMap<>(
+            "electric_glass_melting_recipes", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
 
 
