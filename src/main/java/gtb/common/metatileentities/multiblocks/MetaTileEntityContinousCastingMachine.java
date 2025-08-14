@@ -9,6 +9,7 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
@@ -28,7 +29,7 @@ import static gregtech.api.unification.material.Materials.Steel;
 public class MetaTileEntityContinousCastingMachine extends RecipeMapMultiblockController {
 
     public MetaTileEntityContinousCastingMachine(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CONTINOUS_CASTING_RECIPES);
+        super(metaTileEntityId, RecipeMaps.FLUID_SOLIDFICATION_RECIPES);
     }
 
     @Override
