@@ -18,6 +18,9 @@ import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -31,23 +34,22 @@ public class MetaTileEntityInductionFurnace extends RecipeMapMultiblockControlle
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.MAGNESIA_BASED_REFACTORY_BRICKS);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~F~F~~", "~~CCC~~", "FCCCCCF", "~CCCCC~", "FCCCCCF", "~~CSC~~", "~~F~F~~")
-                .aisle("~~F~F~~", "~~CCC~~", "FC~~~CF", "~C~~~C~", "FC~~~CF", "~~CCC~~", "~~F~F~~")
-                .aisle("~~F~F~~", "~~CCC~~", "FC~~~CF", "~C~~~C~", "FC~~~CF", "~~CCC~~", "~~F~F~~")
-                .aisle("~~~~~~~", "~~FFF~~", "~FCCCF~", "~FC~CF~", "~FCCCF~", "~~FFF~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~~~~~~", "~~CCC~~", "~~C~C~~", "~~CCC~~", "~~~~~~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~~~~~~", "~~CCC~~", "~~C~C~~", "~~CCC~~", "~~~~~~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~~~~~~", "~~CCC~~", "~~C~C~~", "~~CCC~~", "~~~~~~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~FFF~~", "~FZZZF~", "~FZZZF~", "~FZZZF~", "~~FFF~~", "~~~~~~~")
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.BACK)
+                .aisle("~~~~~~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~F~F~~", "~~F~F~~")
+                .aisle("~~FFF~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~FFF~~", "~~CCC~~", "~~CCC~~")
+                .aisle("~FZZZF~", "~~CCC~~", "~~CCC~~", "~~CCC~~", "~FCCCF~", "FC~~~CF", "FCCCCCF")
+                .aisle("~FZZZF~", "~~C~C~~", "~~C~C~~", "~~C~C~~", "~FC~CF~", "~C~~~C~", "~CCCCC~")
+                .aisle("~FZZZF~", "~~CCC~~", "~~CCC~~", "~~CCC~~", "~FCCCF~", "FC~~~CF", "FCCCCCF")
+                .aisle("~~FFF~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~FFF~~", "~~CSC~~", "~~CCC~~")
+                .aisle("~~~~~~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~~~~~~", "~~F~F~~", "~~F~F~~")
                 .where('S', selfPredicate())
                 .where('Z',
-                        states(GCYMMetaBlocks.UNIQUE_CASING.getState(BlockUniqueCasing.UniqueCasingType.HEAT_VENT)))
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.INDUSTRIAL_EXHAUST_VENT)))
                 .where('~', any())
                 .where('F', frames(Materials.Steel))
                 .where('C', states(getCasingState()).setMinGlobalLimited(55)
@@ -63,7 +65,7 @@ public class MetaTileEntityInductionFurnace extends RecipeMapMultiblockControlle
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.HEAT_PROOF_CASING;
+        return GTBTextures.MAGNESIA_BASED_REFRACTORY_BRICKS_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
