@@ -15,6 +15,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(3);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
         RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidOutputs(3);
         RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
         RecipeMaps.EXTRACTOR_RECIPES.setMaxInputs(2);
         RecipeMaps.CHEMICAL_RECIPES.setMaxOutputs(3);
@@ -33,6 +34,8 @@ public final class GTBRecipeLoader {
         RecipeMaps.ARC_FURNACE_RECIPES.setMaxFluidOutputs(3);
         RecipeMaps.ELECTROLYZER_RECIPES.setMaxInputs(3);
         RecipeMaps.BLAST_RECIPES.setMaxFluidOutputs(2);
+        RecipeMaps.PYROLYSE_RECIPES.setMaxFluidOutputs(2);
+        RecipeMaps.PYROLYSE_RECIPES.setMaxFluidInputs(2);
 
 
         MachineRecipes.init();
