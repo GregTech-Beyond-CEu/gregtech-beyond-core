@@ -1,5 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -30,7 +33,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.TITANIUM_STABLE);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.INCOLOY_600_LINED_STEEL_CASING);
     }
 
     @Override
@@ -43,8 +46,8 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
                 .where('#', any())
                 .where('X', states(getCasingState()).setMinGlobalLimited(22)
                         .or(autoAbilities()))
-                .where('F', frames(Materials.Titanium))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
+                .where('F', frames(Materials.StainlessSteel))
+                .where('P', states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.INCOLOY_600_LINED_STEEL_PIPE_CASING)))
                 .build();
     }
 
@@ -56,7 +59,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.STABLE_TITANIUM_CASING;
+        return GTBTextures.INCOLOY_600_LINED_STEEL_CASING_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
