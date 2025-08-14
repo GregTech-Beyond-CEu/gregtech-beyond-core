@@ -1,5 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -32,7 +35,7 @@ public class MetaTileEntityCoker extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.ALUMINA_LINED_STEEL_CASING);
     }
 
     @Override
@@ -66,7 +69,7 @@ public class MetaTileEntityCoker extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.ALUMINA_LINED_STEEL_CASING_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
