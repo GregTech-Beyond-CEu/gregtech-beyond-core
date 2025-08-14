@@ -11,8 +11,10 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.*;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing2;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,7 +29,7 @@ public class MetaTileEntityVacuumArcRemeltingFurnace extends RecipeMapMultiblock
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.VACUUM_ARC_REMELTING_FURNACE_CASING);
     }
 
     @Override
@@ -85,7 +87,7 @@ public class MetaTileEntityVacuumArcRemeltingFurnace extends RecipeMapMultiblock
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return GTBTextures.VACUUM_ARC_REMELTING_FURNACE_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
