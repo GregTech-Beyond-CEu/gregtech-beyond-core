@@ -482,5 +482,15 @@ public class MachineRecipes {
                 'M', HULL,
                 'H', MOTOR,
                 'F', CABLE);
+
+        registerMachineRecipe(GTBMetaTileEntities.PELLETIZER,
+                "CRC",
+                "FMF",
+                "PRP",
+                'C', CIRCUIT,
+                'P', PUMP,
+                'R', ROBOT_ARM,
+                'M', HULL,
+                'F', CABLE);
     }
 }
