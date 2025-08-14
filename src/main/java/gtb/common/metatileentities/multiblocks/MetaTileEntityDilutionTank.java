@@ -1,5 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -30,19 +33,17 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.FRP_LINED_STEEL_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F", "~~~", "F~F")
-                .aisle("CCC", "CCC", "CSC")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("CCC", "CCC", "CCC")
-                .aisle("~C~", "CCC", "~C~")
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.BACK)
+                .aisle("~~C~~", "~CGC~", "~GGG~", "~GGG~", "~CCC~", "~F~F~")
+                .aisle("~CCC~", "C~~~C", "G~~~G", "G~~~G", "CCCCC", "F~~~F")
+                .aisle("CCCCC", "G~~~G", "G~~~G", "G~~~G", "CCCCC", "F~~~F")
+                .aisle("~CCC~", "C~~~C", "G~~~G", "G~~~G", "CCCCC", "F~~~F")
+                .aisle("~~C~~", "~CGC~", "~GGG~", "~GGG~", "~CSC~", "~F~F~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState()).setMinGlobalLimited(15).or(autoAbilities()))
@@ -59,7 +60,7 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return GTBTextures.FRP_LINED_STEEL_CASING_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
