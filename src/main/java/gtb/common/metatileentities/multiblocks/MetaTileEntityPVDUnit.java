@@ -38,25 +38,18 @@ public class MetaTileEntityPVDUnit extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                        "CCCCC",
-                        "CCCCC",
-                        "SCCCC")
-                .aisle(
-                        "PPPPP",
-                        "P~~~P",
-                        "~GGG~")
-                .aisle(
-                        "~CCC~",
-                        "~GGG~",
-                        "~~~~~")
-                .where('S', selfPredicate())
-                .where('~', any())
-                .where('C', states(getCasingState()).setMinGlobalLimited(90)
+        return FactoryBlockPattern.start(RelativeDirection.LEFT, RelativeDirection.UP, RelativeDirection.FRONT)
+                .aisle("BBB", "CCA", "AAA")
+                .aisle("BBB", "CAE", "BEA")
+                .aisle("BBB", "CAE", "BEA")
+                .aisle("BBB", "CAE", "BEA")
+                .aisle("BBD", "CCA", "AAA")
+                .where('D', selfPredicate())
+                .where('A', any())
+                .where('B', states(getCasingState()).setMinGlobalLimited(6)
                         .or(autoAbilities()))
-                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS)))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('E', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS)))
+                .where('C', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
 
