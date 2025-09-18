@@ -1,5 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregtech.common.blocks.BlockGlassCasing;
+import gregtech.common.blocks.MetaBlocks;
+import gtb.common.block.GTBMetaBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -52,7 +55,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('G', states(Blocks.GLASS.getDefaultState()))
+                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS)))
                 .where('~', air())
                 .build();
     }
