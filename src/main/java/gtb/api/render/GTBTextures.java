@@ -35,9 +35,9 @@ public final class GTBTextures {
             "gtb_multiblock_casing2/thermal_evaporation_casing");
     public static SimpleOverlayRenderer SONCIATOR_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing2/sonicator_casing");
-    public static SimpleOverlayRenderer CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
+    public static OrientedOverlayRenderer CVD_UNIT_OVERLAY = new OrientedOverlayRenderer(
             "multiblock/cvd_unit");
-    public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
+    public static OrientedOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new OrientedOverlayRenderer(
             "multiblock/large_cvd_unit");
     public static OrientedOverlayRenderer CURING_OVEN_OVERLAY = new OrientedOverlayRenderer(
             "multiblock/curing_oven");
@@ -111,6 +111,9 @@ public final class GTBTextures {
             "gtb_multiblock_casing3/coagulator_casing");
     public static SimpleOverlayRenderer BRIDGMAN_FURNACE_OVERLAY = new SimpleOverlayRenderer(
             "gtb_multiblock_casing3/bridgman_furnace_casing");
+    public static SimpleOverlayRenderer INJECTION_MOLDING_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing3/injection_molding_casing");
+
 
     private GTBTextures() {}
 
