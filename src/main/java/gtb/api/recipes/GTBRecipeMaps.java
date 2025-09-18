@@ -448,6 +448,10 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> ELECTRIC_GLASS_MELTING_RECIPES = new RecipeMap<>(
             "electric_glass_melting_recipes", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> ISOSTATIC_PRESS_RECIPES = new RecipeMap<>(
+            "isostatic_press", 2, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+
 
 
 

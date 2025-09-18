@@ -135,6 +135,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityInjectionMoldingMachine INJECTION_MOLDING_MACHINE;
     public static MetaTileEntityCoagulator COAGULATOR;
     public static MetaTileEntityElectricGlassMeltingFurnace ELECTRIC_GLASS_MELTING_FURNACE;
+    public static MetaTileEntityIsostaticPress ISOSTATIC_PRESS;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -371,6 +372,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityCoagulator(gtb("coagulator")));
         ELECTRIC_GLASS_MELTING_FURNACE = registerMetaTileEntity(3111,
                 new MetaTileEntityElectricGlassMeltingFurnace(gtb("electric_glass_melting_furnace")));
+        ISOSTATIC_PRESS = registerMetaTileEntity(3112,
+                new MetaTileEntityIsostaticPress(gtb("isostatic_press")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
