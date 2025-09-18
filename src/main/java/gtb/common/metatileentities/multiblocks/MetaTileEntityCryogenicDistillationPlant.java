@@ -36,12 +36,12 @@ public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultibloc
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.BACK)
-                .aisle("CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC")
-                .aisle("CCC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CCC")
-                .aisle("CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CSC")
+                .aisle("CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC")
+                .aisle("CCC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CXC", "CCC")
+                .aisle("CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CCC", "CSC")
                 .where('S', selfPredicate())
                 .where('C',
-                        states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN))
+                        states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.ALUMINIUM_FROSTPROOF))
                                 .setMinGlobalLimited(25)
                                 .or(autoAbilities()))
                 .where('X', states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.COLD_BOX)))
@@ -57,14 +57,14 @@ public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultibloc
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return Textures.FROST_PROOF_CASING;
     }
 
     @SideOnly(Side.CLIENT)
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.ASSEMBLER_OVERLAY;
+        return Textures.BLOWER_OVERLAY;
     }
 
     @Override
