@@ -2,6 +2,7 @@ package gtb.common.metatileentities.multiblocks;
 
 import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 
+import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
@@ -63,7 +64,7 @@ public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
     }
 
     @Override
-    protected @NotNull SimpleOverlayRenderer getFrontOverlay() {
+    protected @NotNull OrientedOverlayRenderer getFrontOverlay() {
         return GTBTextures.LARGE_CVD_UNIT_OVERLAY;
     }
 
