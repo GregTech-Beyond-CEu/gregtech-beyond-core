@@ -15,8 +15,10 @@ import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing2;
+import gtb.common.block.blocks.GTBMultiblockCasing3;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -38,7 +40,7 @@ public class MetaTileEntityInjectionMoldingMachine extends RecipeMapMultiblockCo
                 .aisle("~~CCCC~~~C~~~~C~~~", "PPS~~CPPPCPPPPC~~~", "F~CCCC~~~C~~~~C~~P", "F~C~~F~~~C~~~~CFFF")
                 .where('S', selfPredicate())
                 .where('C',
-                        states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID))
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING3.getState(GTBMultiblockCasing3.CasingType.INJECTION_MOLDING_CASING))
                                 .setMinGlobalLimited(25)
                                 .or(autoAbilities()))
                 .where('F', frames(Steel))
@@ -55,7 +57,7 @@ public class MetaTileEntityInjectionMoldingMachine extends RecipeMapMultiblockCo
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.INJECTION_MOLDING_OVERLAY;
     }
 
     @SideOnly(Side.CLIENT)
