@@ -35,20 +35,24 @@ public class MetaTileEntityBallMill extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~~~~~~~", "C~~~~~~~~~C", "C~~~~~~~~~C", "S~~~~~~~~~C", "~~~~~~~~~~~")
-                .aisle("~~~~~~~~~~~", "~~~~~~~~~~~", "C~~~~~~~~~C", "~~~~~~~~~~~", "~~~~~~~~~~~")
-                .aisle("~~~~~~~~~~~", "~~~~~~~~~~~", "F~PPPPPPP~F", "~~~~~~~~~~~", "~~~~~~~~~~~")
-                .aisle("~~~~~~~~~~~", "~~PPPPPPP~~", "F~P~~~~~P~F", "~~PPPPPPP~~", "~~~~~~~~~~~")
-                .aisle("~~PPPPPPP~~", "~~P~~~~~P~~", "FFP~~~~~PFF", "~~P~~~~~P~~", "~~PPPPPPP~~")
-                .aisle("~~~~~~~~~~~", "~~PPPPPPP~~", "~~P~~~~~P~~", "~~PPPPPPP~~", "~~~~~~~~~~~")
-                .aisle("~~~~~~~~~~~", "~~~~~~~~~~~", "~~PPPPPPP~~", "~~~~~~~~~~~", "~~~~~~~~~~~")
-                .where('S', selfPredicate())
-                .where('~', any())
+        return FactoryBlockPattern.start(RelativeDirection.LEFT, RelativeDirection.UP, RelativeDirection.FRONT)
+                .aisle("AABCCA", "AAACAA", "AAADAA", "AAADAA", "AAADAA", "AAADAA", "AAAAAA", "AAAAAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAADAA", "AAAAAA", "AAAAAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEEEA", "AEEEEE", "AAEEEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEAEA", "AEAAAE", "AAEAEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEAEA", "AEAAAE", "AAEAEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEEEA", "AEAAAE", "AAEAEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEAEA", "AEAAAE", "AAEAEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEAEA", "AEAAAE", "AAEAEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAEAA", "AAEEEA", "AEEEEE", "AAEEEA", "AAAEAA")
+                .aisle("AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAAAAA", "AAADAA", "AAAAAA", "AAAAAA")
+                .aisle("AACCCA", "AAACAA", "AAADAA", "AAADAA", "AAADAA", "AAADAA", "AAAAAA", "AAAAAA")
+                .where('B', selfPredicate())
+                .where('A', any())
                 .where('C', states(getCasingState())
                         .or(autoAbilities()))
-                .where('F', frames(Steel))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('D', frames(Steel))
+                .where('E', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
 
