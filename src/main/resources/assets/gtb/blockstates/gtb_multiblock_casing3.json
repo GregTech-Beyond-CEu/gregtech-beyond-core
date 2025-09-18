@@ -79,6 +79,12 @@
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing3/cold_box"
         }
+      },
+      "injection_molding_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/injection_molding_casing"
+        }
       }
     }
   }
