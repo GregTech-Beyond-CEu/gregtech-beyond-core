@@ -85,6 +85,18 @@
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing3/injection_molding_casing"
         }
+      },
+      "computer_core_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing3/computer_core_casing"
+        }
+      },
+      "mold_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+            "all" : "gregtech:blocks/gtb_multiblock_casing3/mold_casing"
+        }
       }
     }
   }
