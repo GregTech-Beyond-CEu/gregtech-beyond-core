@@ -113,6 +113,8 @@ public final class GTBTextures {
             "gtb_multiblock_casing3/bridgman_furnace_casing");
     public static SimpleOverlayRenderer INJECTION_MOLDING_OVERLAY = new SimpleOverlayRenderer(
             "gtb_multiblock_casing3/injection_molding_casing");
+    public static OrientedOverlayRenderer CZ_PULLER_OVERLAY = new OrientedOverlayRenderer(
+            "multiblock/cz_puller");
 
 
     private GTBTextures() {}
