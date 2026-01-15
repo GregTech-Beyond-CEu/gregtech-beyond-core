@@ -47,6 +47,8 @@ public class GTBMaterials {
     /* public static Material Uranium235 = Materials.Uranium235; */
     /* public static Material Uranium238 = Materials.Uranium238; */
     public static Material Uranium239;
+    public static Material Iron54;
+    public static Material Manganese54;
     /* public static Material LowEnrichedUraniumHexafluoride = Materials.EnrichedUraniumHexafluoride; */
 
     public static Material LowEnrichedUraniumDioxide;
