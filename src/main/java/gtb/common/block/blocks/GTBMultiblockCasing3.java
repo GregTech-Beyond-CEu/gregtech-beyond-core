@@ -43,7 +43,9 @@ public class GTBMultiblockCasing3 extends VariantBlock<GTBMultiblockCasing3.Casi
         COAGULATOR_CASING("coagulator_casing"),
         BRIDGMAN_FURNACE_CASING("bridgman_furnace_casing"),
         COLD_BOX("cold_box"),
-        INJECTION_MOLDING_CASING("injection_molding_casing");
+        INJECTION_MOLDING_CASING("injection_molding_casing"),
+        MOLD_CASING("mold_casing"),
+        COMPUTER_CORE_CASING("computer_core_casing");
         private final String name;
 
         CasingType(String name) {
