@@ -362,7 +362,7 @@ public final class GTBRecipeMaps {
             "induction_furnace", 9, 1, 3, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> THERMAL_DECOMPOSITION_RECIPES = new RecipeMap<>(
-            "thermal_decomposition", 2, 2, 1, 2, new SimpleRecipeBuilder(), false);
+            "thermal_decomposition", 2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTROCHEMICAL_CELL_RECIPES = new RecipeMap<>(
             "electrochemical_recipes", 3, 2, 4, 3, new SimpleRecipeBuilder(), false);
@@ -451,7 +451,20 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> ISOSTATIC_PRESS_RECIPES = new RecipeMap<>(
             "isostatic_press", 2, 2, 1, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> PROGRAMMING_STATION = new RecipeMap<>(
+            "programming_station", 2, 1, 1, 0, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> CZ_PULLER_RECIPES = new RecipeMap<>(
+            "cz_puller", 2, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SHAFT_FURNACE_RECIPES = new RecipeMap<>(
+            "shaft_furnace", 4, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> COMPONENT_ASSEMBLER_RECIPES= new RecipeMap<>(
+            "component_assembler", 12, 1, 4, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HYDRATOR_RECIPES= new RecipeMap<>(
+            "hydrator", 4, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
 
 
