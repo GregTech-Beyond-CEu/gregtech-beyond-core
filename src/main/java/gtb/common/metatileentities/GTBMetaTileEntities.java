@@ -136,6 +136,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityCoagulator COAGULATOR;
     public static MetaTileEntityElectricGlassMeltingFurnace ELECTRIC_GLASS_MELTING_FURNACE;
     public static MetaTileEntityIsostaticPress ISOSTATIC_PRESS;
+    public static MetaTileEntityProgrammingStation PROGRAMMING_STATION;
+    public static MetaTileEntityCZPuller CZ_PULLER;
+    public static MetaTileEntityShaftFurnace SHAFT_FURNACE;
+    public static MetaTileEntityComponentAssembler COMPONENT_ASSEMBLER;
+    public static MetaTileEntityHydrator HYDRATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -374,6 +379,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityElectricGlassMeltingFurnace(gtb("electric_glass_melting_furnace")));
         ISOSTATIC_PRESS = registerMetaTileEntity(3112,
                 new MetaTileEntityIsostaticPress(gtb("isostatic_press")));
+        PROGRAMMING_STATION = registerMetaTileEntity(3113,
+                new MetaTileEntityProgrammingStation(gtb("programming_station")));
+        CZ_PULLER = registerMetaTileEntity(3114,
+                new MetaTileEntityCZPuller(gtb("cz_puller")));
+        SHAFT_FURNACE = registerMetaTileEntity(3115,
+                new MetaTileEntityShaftFurnace(gtb("shaft_furnace")));
+        COMPONENT_ASSEMBLER = registerMetaTileEntity(3116,
+                new MetaTileEntityComponentAssembler(gtb("component_assembler")));
+        HYDRATOR = registerMetaTileEntity(3117,
+                new MetaTileEntityHydrator(gtb("hydrator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
