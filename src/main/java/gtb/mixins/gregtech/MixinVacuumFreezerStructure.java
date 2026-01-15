@@ -92,7 +92,7 @@ public abstract class MixinVacuumFreezerStructure extends RecipeMapMultiblockCon
                         .where('Z', states(gregtech_beyond_core$getSteelCasingState()))
                         .where('H', states(gregtech_beyond_core$getFireboxCasingState()))
                         .where('C', states(getCasingState()).setMinGlobalLimited(50)
-                                .or(autoAbilities(true, false, true, true, true, true, false)))
+                                .or(autoAbilities(true, true, true, true, true, true, false)))
                         .where('#', air())
                         .build());
     }
