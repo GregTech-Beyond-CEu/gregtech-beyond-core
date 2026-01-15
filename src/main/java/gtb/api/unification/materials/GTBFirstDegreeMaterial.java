@@ -91,6 +91,18 @@ public class GTBFirstDegreeMaterial {
                 .element(Elements.Pu)
                 .build();
 
+        Iron54 = new Material.Builder(getMaterialsId(), gregtechId("iron_54"))
+                .color(0xDBDCDC).iconSet(METALLIC)
+                .dust()
+                .element(Elements.Fe)
+                .build();
+
+        Manganese54 = new Material.Builder(getMaterialsId(), gregtechId("manganese_54"))
+                .color(0xE0D2D6).iconSet(METALLIC)
+                .dust()
+                .element(Elements.Mn)
+                .build();
+
     }
 
     private static int getMaterialsId() {
