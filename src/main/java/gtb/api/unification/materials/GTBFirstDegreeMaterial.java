@@ -76,7 +76,7 @@ public class GTBFirstDegreeMaterial {
         Plutonium239 = new Material.Builder(getMaterialsId(), gregtechId("plutonium_239"))
                 .liquid(new FluidBuilder().temperature(913))
                 .color(0xF03232).iconSet(METALLIC)
-                .element(SCElements.Pu242)
+                .element(Elements.Pu239)
                 .build();
 
         Plutonium244 = new Material.Builder(getMaterialsId(), gregtechId("plutonium_244"))

@@ -23,6 +23,7 @@ import static supercritical.api.unification.ore.SCOrePrefix.*;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.MetaBlocks;
+import gtb.api.unification.materials.GTBMaterials;
 import supercritical.common.SCConfigHolder;
 import supercritical.common.blocks.BlockFissionCasing;
 import supercritical.common.blocks.BlockGasCentrifugeCasing;
@@ -436,7 +437,7 @@ public class SupercriticalRecipes {
                     "FFF",
                     "PCP", "FFF",
                     'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.HV),
-                    'P', new UnificationEntry(OrePrefix.pipeLargeFluid, Inconel718),
+                    'P', new UnificationEntry(OrePrefix.pipeLargeFluid, StainlessSteel),
                     'F', MetaBlocks.METAL_CASING.getItemVariant(STEEL_SOLID));
         }
 
